@@ -17,6 +17,11 @@ public:
 
     virtual bool init();
     
+    void menuPlayCallback(cocos2d::Ref* pSender);
+    void menuScoresCallback(cocos2d::Ref* pSender);
+    
+    void menuSoundCallback(cocos2d::Ref* pSender);
+    
     CREATE_FUNC(HomeScene);
 private:
     
