@@ -19,16 +19,12 @@ public:
 
     virtual bool init();
     
-    void menuHomeCallback(cocos2d::Ref* pSender);
-    
     CREATE_FUNC(GameScene);
 private:
     
     const int MOVE_TIME = 1;
     
-    DisplayGrid* gridDisplay = nullptr;
-    cocos2d::Sprite* divingBoard = nullptr;
-    
+    void menuHomeCallback(cocos2d::Ref* pSender);
 };
 
 #endif /* GameScene_hpp */

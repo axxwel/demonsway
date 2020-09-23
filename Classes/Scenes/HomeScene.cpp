@@ -27,7 +27,7 @@ bool HomeScene::init()
         return false;
     }
 
-    // add sprite sheet image list
+    // get sprite sheet image list
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
 
     // get screen size

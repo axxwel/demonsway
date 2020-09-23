@@ -28,7 +28,7 @@ DisplayBackground* DisplayBackground::create()
 
 bool DisplayBackground::init()
 {
-    //add sprite sheet image list
+    //get sprite sheet image list
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
     
     //get screen size
@@ -61,7 +61,7 @@ bool DisplayBackground::init()
         }
     }
     
-    //place the background
+    //place and add background
     background->setPosition(Vec2(
                                     - nbrOfImagesPerLine*imageWith/2 + imageWith/2,
                                     - nbrOfImagesPerColumn*imageHeigth/2 + imageHeigth/2));
