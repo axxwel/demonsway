@@ -6,6 +6,7 @@
 //
 
 #include "HomeScene.hpp"
+#include "GameScene.hpp"
 
 #include "../DisplayObjects/DisplayBackground.hpp"
 
@@ -93,10 +94,8 @@ bool HomeScene::init()
 // replace current scene to game scene
 void HomeScene::menuPlayCallback(Ref* pSender)
 {
-    /*
     auto scene = GameScene::createScene();
     Director::getInstance()->replaceScene(scene);
-    */
 }
 
 // replace current scene to score scene

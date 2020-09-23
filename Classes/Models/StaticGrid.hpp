@@ -18,7 +18,7 @@ public:
      * @param gridXY grid position in screen.
      * @return pixel position of grid case.
     */
-    static cocos2d::Vec2 getPositionXY(const cocos2d::Vec2 LC, const cocos2d::Vec2 gridXY);
+    static cocos2d::Vec2 getPositionXY(const cocos2d::Vec2 LC);
     
 private:
     /**
