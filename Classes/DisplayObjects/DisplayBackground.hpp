@@ -20,6 +20,8 @@ public:
 private:
     cocos2d::Node* background = nullptr;
     
-    void moveBackground();};
+    void moveBackground();
+    
+};
 
 #endif /* DisplayBackground_hpp */
