@@ -10,7 +10,7 @@
 
 #include "cocos2d.h"
 
-#include "../DisplayObjects/DisplayGrid.hpp"
+#include "../DisplayObjects/Demon.hpp"
 
 class GameScene : public cocos2d::Scene
 {
@@ -20,9 +20,17 @@ public:
     virtual bool init();
     
     CREATE_FUNC(GameScene);
-private:
     
-    const int MOVE_TIME = 1;
+private:
+    const float MOVE_TIME = 0.5;
+    
+    cocos2d::Sprite* divingBoard = nullptr;
+    
+    Demon* demonDiver = nullptr;
+    
+    bool addNewDemon();
+    
+    bool addDemonGrid(int l, int c);
     
     void menuHomeCallback(cocos2d::Ref* pSender);
 };

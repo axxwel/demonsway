@@ -13,6 +13,7 @@
 enum DemonAction {
     enterDiving,
     waiting,
+    blink,
     dance,
     walk
 };
@@ -27,7 +28,7 @@ public:
     bool action(DemonAction demonAction);
     
 private:
-    const std::string NAME_ARRAY[9] = {"air","eau","feu","foret","jour","meca","nuit","temps","terre"};
+    const std::string NAME_ARRAY[9] = {"Air","Water","Fire","Forest","Day","Mecha","Night","Time","Ground"};
     const std::string WAY_ARRAY[4] = {"face","side","side","back"};
     
     int nameIndex;

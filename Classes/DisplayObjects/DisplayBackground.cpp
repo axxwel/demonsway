@@ -73,5 +73,5 @@ bool DisplayBackground::init()
 
 void DisplayBackground::moveBackground()
 {
-    
+    //move background 
 }
