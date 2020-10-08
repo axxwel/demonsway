@@ -12,6 +12,7 @@ USING_NS_CC;
 
 DisplayGrid* DisplayGrid::create()
 {
+    //create new instance pointer
     DisplayGrid* ret = new (std::nothrow) DisplayGrid();
     if(ret && ret->init ())
     {
@@ -26,6 +27,7 @@ DisplayGrid* DisplayGrid::create()
 
 bool DisplayGrid::init()
 {
+    // get sprite sheet image list
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
     
     auto gridContainer = Node::create();
@@ -53,15 +55,17 @@ bool DisplayGrid::init()
             {
                 int buttonColor = rand() % 6;
                 
+                //init button image
                 auto gridBtnNormal = Sprite::createWithSpriteFrameName("grid_button_normal_" + std::to_string(buttonColor) + "@2x.png");
                 auto gridBtnSelected = Sprite::createWithSpriteFrameName("grid_button_selected_" + std::to_string(buttonColor) + "@2x.png");
+                
+                //init menu and callback button line and collumn
                 auto gridBtn = MenuItemSprite::create(
                                                      gridBtnNormal,
                                                      gridBtnSelected,
                                                      CC_CALLBACK_1(DisplayGrid::gridButtonCallback, this, l, c));
-                
+                // place and add button
                 gridBtn->setPosition(Vec2(positionXY.x, positionXY.y - BTN_SHIFT_HEIGHT));
-                
                 gridButtonsMenu->addChild(gridBtn);
             }
           
@@ -102,11 +106,13 @@ void DisplayGrid::gridButtonCallback(cocos2d::Ref* pSender, int line, int collum
 
 std::string DisplayGrid::cornerName(int line, int collumn)
 {
+    //get grid corner position
     int cornerLeftUp = gridArray[line-1][collumn-1];
     int cornerRigthUp = gridArray[line-1][collumn];
     int cornerRigthDown = gridArray[line][collumn];
     int cornerLeftDown = gridArray[line][collumn-1];
     
+    //check if corner is in grid
     if(line-1 < 0)
     {
         cornerLeftUp = 0;
@@ -128,6 +134,7 @@ std::string DisplayGrid::cornerName(int line, int collumn)
         cornerRigthDown = 0;
     }
     
+    // corner image code
     std::string result = std::to_string(cornerLeftUp) +
                          std::to_string(cornerRigthUp) +
                          std::to_string(cornerRigthDown) +

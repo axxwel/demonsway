@@ -118,6 +118,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //all sprites sizes must multiply by the ScaleFactor.
     director->setContentScaleFactor(2);
     
+    // add sprite sheet image list
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("demonWaterAssets.plist");
     
     register_all_packages();
 

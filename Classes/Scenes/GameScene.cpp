@@ -30,9 +30,6 @@ bool GameScene::init()
     {
         return false;
     }
-    
-    // get sprite sheet image list
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
 
     // get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -88,16 +85,19 @@ bool GameScene::init()
 
 bool GameScene::addNewDemon()
 {
+    // reset the demon diver pointer
     demonDiver = nullptr;
     
     // get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    // create new demon and add out of screen
     auto newDemon = Demon::create();
     newDemon->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y - newDemon->getContentSize().height));
     this->addChild(newDemon, 2);
     
+    // move demon to divin board edge an wait push grid button
     auto move = MoveTo::create(MOVE_TIME, Vec2(divingBoard->getPosition().x,divingBoard->getContentSize().height*3/4));
     auto callFunc = CallFunc::create([=]()
     {
@@ -113,17 +113,23 @@ bool GameScene::addNewDemon()
 
 bool GameScene::addDemonGrid(int l, int c)
 {
+    //check if a demon is ready to jump in demon grid
     if(!demonDiver)
         return false;
     
+    // init jumper demon pointer
     Demon* demon = demonDiver;
+    
+    // add a new demon on diver board
     addNewDemon();
     
+    //get demon grid pixel position
     Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
     
+    // move demon to grid position
     auto move = MoveTo::create(MOVE_TIME, posDemon);
-    auto scaleUp = ScaleTo::create(MOVE_TIME/2, 1.5);
-    auto scaleDown = ScaleTo::create(MOVE_TIME/2, 0.8);
+    auto scaleUp = ScaleTo::create(MOVE_TIME/2, JUMP_SCALE);
+    auto scaleDown = ScaleTo::create(MOVE_TIME/2, DEMON_IN_GRID_SCALE);
     auto scaleSeq = Sequence::create(scaleUp, scaleDown, NULL);
     auto callFunc = CallFunc::create([=]()
     {

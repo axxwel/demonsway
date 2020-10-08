@@ -7,9 +7,26 @@
 
 #include "StaticGrid.hpp"
 
+cocos2d::Vec2 StaticGrid::getPositionXY(const cocos2d::Vec2 LC)
+{
+    // get screen size
+    auto director = cocos2d::Director::getInstance();
+    auto visibleSize = director->getVisibleSize();
+    cocos2d::Vec2 origin = director->getVisibleOrigin();
+    int gridPosX = visibleSize.width/2 + origin.x;
+    int gridPosY = visibleSize.height/2 + origin.y;
+    
+    // create grid array if null (frist call)
+    if(gridXY.size() <= 0)
+        initGrid();
+    
+    return cocos2d::Vec2(gridXY[LC.x][LC.y].x + gridPosX,
+    gridXY[LC.x][LC.y].y + gridPosY);
+}
 
 bool StaticGrid::initGrid()
 {
+    // clean grid array if first call
     gridXY.clear();
     
     for (int l = 0; l <= GRID_SIZE; l++) {
@@ -29,20 +46,3 @@ bool StaticGrid::initGrid()
     
     return true;
 }
-
-
-cocos2d::Vec2 StaticGrid::getPositionXY(const cocos2d::Vec2 LC)
-{
-    auto director = cocos2d::Director::getInstance();
-    auto visibleSize = director->getVisibleSize();
-    cocos2d::Vec2 origin = director->getVisibleOrigin();
-    int gridPosX = visibleSize.width/2 + origin.x;
-    int gridPosY = visibleSize.height/2 + origin.y;
-    
-    if(gridXY.size() <= 0)
-        initGrid();
-    
-    return cocos2d::Vec2(gridXY[LC.x][LC.y].x + gridPosX,
-    gridXY[LC.x][LC.y].y + gridPosY);
-}
-

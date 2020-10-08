@@ -23,23 +23,37 @@ class Demon : public cocos2d::Node
 public:
     static Demon* create();
 
+    
     virtual bool init();
     
+    /**
+     * @brief send demon action.
+     * @param DemonAction action type.
+     * @return action type OK.
+    */
     bool action(DemonAction demonAction);
     
 private:
-    const std::string NAME_ARRAY[9] = {"Air","Water","Fire","Forest","Day","Mecha","Night","Time","Ground"};
+    
+    // demon's type array
+    const std::string NAME_ARRAY[9] = {"air","water","fire","forest","day","mecha","night","time","ground"};
+    // demon's direction array
     const std::string WAY_ARRAY[4] = {"face","side","side","back"};
     
+    // demons init values
     int nameIndex;
     int wayIndex;
     
-    std::string nameStr;
-    std::string wayStr;
-    
+    // demon sprite pointer
     cocos2d::Sprite* demonSprite = nullptr;
     
-    bool setAnimation(std::string format, int count);
+    /**
+     * @brief set and start demon animation.
+     * @param animName animation name.
+     * @param count image animation amount.
+     * @return action OK.
+    */
+    bool setAnimation(std::string animName, int count);
 };
 
 #endif /* Demon_hpp */

@@ -27,9 +27,6 @@ bool HomeScene::init()
         return false;
     }
 
-    // get sprite sheet image list
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
-
     // get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();

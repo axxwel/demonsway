@@ -17,6 +17,8 @@ public:
 
     virtual bool init();
     
+    
+    // buttons callback
     void menuPlayCallback(cocos2d::Ref* pSender);
     void menuScoresCallback(cocos2d::Ref* pSender);
     

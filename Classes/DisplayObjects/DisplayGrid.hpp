@@ -20,19 +20,16 @@ public:
     
 private:
     
-    static const int GRID_SHIFT = 260;
-    static const int BTN_SHIFT_HEIGHT = 24;
-    
-    int cornerGridArray [GRID_SIZE + 1][GRID_SIZE + 1];
-    int gridArray [GRID_SIZE][GRID_SIZE] = {{1,1,1,1,1,1},
-                                            {1,1,1,1,1,1},
-                                            {1,1,1,1,1,1},
-                                            {1,1,1,1,1,1},
-                                            {1,1,1,1,1,1},
-                                            {1,1,1,1,1,1}};
+    const int BTN_SHIFT_HEIGHT = 24;
+    const int gridArray [GRID_SIZE][GRID_SIZE] = {{1,1,1,1,1,1},
+                                                  {1,1,1,1,1,1},
+                                                  {1,1,1,1,1,1},
+                                                  {1,1,1,1,1,1},
+                                                  {1,1,1,1,1,1},
+                                                  {1,1,1,1,1,1}};
     
     /**
-     * @brief Get the corner image code position.
+     * @brief Dispath event "GRID_BTN_PUSH" and vector content button pushed line and collumn.
      * @param pSender button grid reference.
      * @param line button touch line number.
      * @param collumn button touch collumn number.
