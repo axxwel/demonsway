@@ -12,6 +12,7 @@
 
 #include "../DisplayObjects/DisplayBackground.hpp"
 #include "../DisplayObjects/DisplayGrid.hpp"
+#include "../DisplayObjects/DisplayDemonsGrid.hpp"
 
 
 USING_NS_CC;
@@ -62,11 +63,16 @@ bool GameScene::init()
     this->addChild(gridDisplay, 1);
     
     // create and add divingBoard
-    divingBoard = Sprite::createWithSpriteFrameName("divingBoard@2x.png");
+    auto divingBoard = Sprite::createWithSpriteFrameName("divingBoard@2x.png");
     divingBoard->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y + divingBoard->getContentSize().height/2));
-    this->addChild(divingBoard);
+    this->addChild(divingBoard,2);
     
-    addNewDemon();
+    // create and add display grid (display grid use static grid to set position)
+    auto demonsGridDisplay = DisplayDemonsGrid::create(divingBoard);
+    this->addChild(demonsGridDisplay, 3);
+    
+    // remove event listener (create duplicate when restart a new GameScene)
+    _eventDispatcher->removeCustomEventListeners("GRID_BTN_PUSH");
     
     //add event listener to check whitch button is pushed in displayGrid
     _eventDispatcher->addCustomEventListener("GRID_BTN_PUSH",[=](EventCustom* event)
@@ -77,68 +83,8 @@ bool GameScene::init()
         int buttonCollumn = eventData[1];
         
         printf("dataEvent l = %i, c = %i\n", buttonLine, buttonCollumn);
-        addDemonGrid(buttonLine, buttonCollumn);
-    });
-    
-    return true;
-}
-
-bool GameScene::addNewDemon()
-{
-    // reset the demon diver pointer
-    demonDiver = nullptr;
-    
-    // get screen size
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    // create new demon and add out of screen
-    auto newDemon = Demon::create();
-    newDemon->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y - newDemon->getContentSize().height));
-    this->addChild(newDemon, 2);
-    
-    // move demon to divin board edge an wait push grid button
-    auto move = MoveTo::create(MOVE_TIME, Vec2(divingBoard->getPosition().x,divingBoard->getContentSize().height*3/4));
-    auto callFunc = CallFunc::create([=]()
-    {
-        newDemon->action(waiting);
-        demonDiver = newDemon;
-    });
-    auto seq = Sequence::create(move, callFunc, NULL);
-    newDemon->runAction(seq);
-    newDemon->action(enterDiving);
-    
-    return true;
-}
-
-bool GameScene::addDemonGrid(int l, int c)
-{
-    //check if a demon is ready to jump in demon grid
-    if(!demonDiver)
-        return false;
-    
-    // init jumper demon pointer
-    Demon* demon = demonDiver;
-    
-    // add a new demon on diver board
-    addNewDemon();
-    
-    //get demon grid pixel position
-    Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
-    
-    // move demon to grid position
-    auto move = MoveTo::create(MOVE_TIME, posDemon);
-    auto scaleUp = ScaleTo::create(MOVE_TIME/2, JUMP_SCALE);
-    auto scaleDown = ScaleTo::create(MOVE_TIME/2, DEMON_IN_GRID_SCALE);
-    auto scaleSeq = Sequence::create(scaleUp, scaleDown, NULL);
-    auto callFunc = CallFunc::create([=]()
-    {
-        demon->action(waiting);
-        //ADD TO DEMON GRID
-    });
-    auto seq = Sequence::create(Spawn::create(scaleSeq, move, NULL), callFunc, NULL);
-    demon->runAction(seq);
-    demon->action(dance);
+        demonsGridDisplay->addDemonGrid(buttonLine, buttonCollumn);
+    });    
     
     return true;
 }
