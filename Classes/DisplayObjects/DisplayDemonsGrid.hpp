@@ -39,6 +39,8 @@ private:
     // pointer to demon ready to jump in grid
     Demon* _demonDiver = nullptr;
     
+    bool _noDemonsMoved = true;
+    
     /**
      * @brief add new demon in demon grid.
      * @return action type OK.

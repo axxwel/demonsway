@@ -83,12 +83,19 @@ bool DisplayDemonsGrid::addNewDemon()
 
 bool DisplayDemonsGrid::addDemonGrid(int l, int c)
 {
-    //check if a demon is ready to jump in demon grid
+    // check if demon is ready to jump in demon grid
     if(!_demonDiver)
+        return false;
+    
+    // check if demon grid case is free
+    if(_demonsGrid[l][c] != nullptr)
         return false;
     
     // init jumper demon pointer
     Demon* demon = _demonDiver;
+    
+    // reset the demon diver pointer
+    _demonDiver = nullptr;
     
     //get demon grid pixel position
     Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
@@ -113,7 +120,7 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
 
 bool DisplayDemonsGrid::moveDemonsGrid()
 {
-    bool noDemonsMoved = true;
+    _noDemonsMoved = true;
     
     for(int l = 0; l < GRID_SIZE; l++)
     {
@@ -154,7 +161,7 @@ bool DisplayDemonsGrid::moveDemonsGrid()
                         if(demonAlreadyMoved == false)
                         {
                             // if all flags ok move demon and push it in already moved list.
-                            noDemonsMoved = false;
+                            _noDemonsMoved = false;
                             _demonsMovedList.push_back(demon);
                             moveDemon(demon, l, c, newL, newC);
                         }
@@ -163,22 +170,23 @@ bool DisplayDemonsGrid::moveDemonsGrid()
             }
         }
     }
-    
-    // check if all demon moved
-    if(noDemonsMoved)
-    {
-        _demonsMovedList.clear();
-        addNewDemon();
-    }
-    else
-    {
-        float delay = MOVE_TIME + 0.1;
-        auto delayTime = DelayTime::create(delay);
-        auto callFunc = CallFunc::create([this](){
+    // wait demon move turn end to move the grid another time
+    float delay = MOVE_TIME + 0.1;
+    auto delayTime = DelayTime::create(delay);
+    auto callFunc = CallFunc::create([this](){
+        // check if all demon moved
+        if(_noDemonsMoved)
+        {
+            _demonsMovedList.clear();
+            addNewDemon();
+        }
+        else
+        {
             moveDemonsGrid();
-        });
-        this->runAction(Sequence::create(delayTime, callFunc, NULL));
-    }
+        }
+    });
+    this->runAction(Sequence::create(delayTime, callFunc, NULL));
+    
     
     return true;
 }
