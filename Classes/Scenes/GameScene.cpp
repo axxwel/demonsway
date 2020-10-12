@@ -82,7 +82,6 @@ bool GameScene::init()
         int buttonLine = eventData[0];
         int buttonCollumn = eventData[1];
         
-        printf("dataEvent l = %i, c = %i\n", buttonLine, buttonCollumn);
         demonsGridDisplay->addDemonGrid(buttonLine, buttonCollumn);
     });    
     

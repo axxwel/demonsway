@@ -101,11 +101,107 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
     auto callFunc = CallFunc::create([=]()
     {
         demon->action(waiting);
-        //ADD TO DEMON GRID
+        _demonsGrid[l][c] = demon;
+        moveDemonsGrid();
     });
     auto seq = Sequence::create(Spawn::create(scaleSeq, move, NULL), callFunc, NULL);
     demon->runAction(seq);
     demon->action(dance);
+    
+    return true;
+}
+
+bool DisplayDemonsGrid::moveDemonsGrid()
+{
+    bool noDemonsMoved = true;
+    
+    for(int l = 0; l < GRID_SIZE; l++)
+    {
+        for(int c = 0; c < GRID_SIZE; c++)
+        {
+            Demon* demon = _demonsGrid[l][c];
+            if(demon)
+            {
+                // set moving grid case new line (int newL), new collumn (int newC)
+                int wayIndex = demon->getWayIndex();
+                int newL = l;
+                int newC = c;
+                switch (wayIndex) {
+                    case 0: newL +=1; break;
+                    case 1: newC -=1; break;
+                    case 2: newC +=1; break;
+                    case 3: newL -=1; break;
+                        
+                    default: break;
+                }
+                
+                // check if new case is out of grid
+                if(newL >= 0 && newL < GRID_SIZE && newC >= 0 && newC < GRID_SIZE)
+                {
+                    // check if new case is free
+                    if(_demonsGrid[newL][newC] == nullptr)
+                    {
+                        // check if moving demon had already moved
+                        bool demonAlreadyMoved = false;
+                        Vector<Demon*>::iterator dIt;
+                        for(dIt = _demonsMovedList.begin(); dIt != _demonsMovedList.end(); dIt++)
+                        {
+                            if(demon == *dIt)
+                            {
+                                demonAlreadyMoved = true;
+                            }
+                        }
+                        if(demonAlreadyMoved == false)
+                        {
+                            // if all flags ok move demon and push it in already moved list.
+                            noDemonsMoved = false;
+                            _demonsMovedList.push_back(demon);
+                            moveDemon(demon, l, c, newL, newC);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // check if all demon moved
+    if(noDemonsMoved)
+    {
+        _demonsMovedList.clear();
+        addNewDemon();
+    }
+    else
+    {
+        float delay = MOVE_TIME + 0.1;
+        auto delayTime = DelayTime::create(delay);
+        auto callFunc = CallFunc::create([this](){
+            moveDemonsGrid();
+        });
+        this->runAction(Sequence::create(delayTime, callFunc, NULL));
+    }
+    
+    return true;
+}
+
+bool DisplayDemonsGrid::moveDemon(Demon* demon, int oldL, int oldC, int newL, int newC)
+{
+    if(!demon)
+        return false;
+    
+    //get demon grid pixel position
+    Vec2 posDemon = StaticGrid::getPositionXY(Vec2(newL, newC));
+    
+    // move demon to grid position and refresh grid
+    auto move = MoveTo::create(MOVE_TIME, posDemon);
+    auto callFunc = CallFunc::create([=]()
+    {
+        demon->action(waiting);
+        _demonsGrid[newL][newC] = demon;
+        _demonsGrid[oldL][oldC] = nullptr;
+    });
+    auto seq = Sequence::create(move, callFunc, NULL);
+    demon->runAction(seq);
+    demon->action(walk);
     
     return true;
 }

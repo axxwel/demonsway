@@ -44,6 +44,20 @@ private:
      * @return action type OK.
     */
     bool addNewDemon();
+    
+    /**
+     * @brief move demons in the grid.
+     * @return action type OK.
+    */
+    bool moveDemonsGrid();
+    
+    /**
+     * @brief move demon in demon grid.
+     * @param l grid line.
+     * @param c grid collumn
+     * @return action type OK.
+    */
+    bool moveDemon(Demon* demon, int oldL, int oldC, int newL, int newC);
 };
 
 #endif /* DisplayDemonsGrid_hpp */

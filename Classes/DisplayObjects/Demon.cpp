@@ -30,15 +30,15 @@ bool Demon::init()
 {
     // init demon random type and direction
     srand((unsigned)time(NULL));
-    nameIndex = 1;//rand() % 9;
-    wayIndex = 0;//rand() % 4;
+    _nameIndex = 1;//rand() % 9;
+    _wayIndex = 0;//rand() % 4;
     
-    const std::string nameStr = NAME_ARRAY[nameIndex];
-    const std::string wayStr = WAY_ARRAY[wayIndex];
+    const std::string nameStr = NAME_ARRAY[_nameIndex];
+    const std::string wayStr = WAY_ARRAY[_wayIndex];
     
     // create and add demon
-    demonSprite = Sprite::createWithSpriteFrameName(nameStr + "_" + wayStr + "_stand0001.png");
-    this->addChild(demonSprite);
+    _demonSprite = Sprite::createWithSpriteFrameName(nameStr + "_" + wayStr + "_stand0001.png");
+    this->addChild(_demonSprite);
     
     return true;
 }
@@ -46,10 +46,10 @@ bool Demon::init()
 bool Demon::action(DemonAction demonAction)
 {
     // before start new action reset animation
-    demonSprite->stopAllActions();
+    _demonSprite->stopAllActions();
     
-    const std::string nameStr = NAME_ARRAY[nameIndex];
-    const std::string wayStr = WAY_ARRAY[wayIndex];
+    const std::string nameStr = NAME_ARRAY[_nameIndex];
+    const std::string wayStr = WAY_ARRAY[_wayIndex];
     
     // select animation (animetion name, animation frame number)
     switch(demonAction)
@@ -91,7 +91,16 @@ bool Demon::setAnimation(std::string animName, int count)
     
     // set animation FPS and run animation
     auto animation = Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
-    demonSprite->runAction(RepeatForever::create(Animate::create(animation)));
+    _demonSprite->runAction(RepeatForever::create(Animate::create(animation)));
     
     return true;
+}
+
+int Demon::getNameIndex()
+{
+    return _nameIndex;
+}
+int Demon::getWayIndex()
+{
+    return _wayIndex;
 }

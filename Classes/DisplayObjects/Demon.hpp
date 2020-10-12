@@ -33,6 +33,9 @@ public:
     */
     bool action(DemonAction demonAction);
     
+    int getNameIndex();
+    int getWayIndex();
+    
 private:
     
     // demon's type array
@@ -41,11 +44,11 @@ private:
     const std::string WAY_ARRAY[4] = {"face","side","side","back"};
     
     // demons init values
-    int nameIndex;
-    int wayIndex;
+    int _nameIndex;
+    int _wayIndex;
     
     // demon sprite pointer
-    cocos2d::Sprite* demonSprite = nullptr;
+    cocos2d::Sprite* _demonSprite = nullptr;
     
     /**
      * @brief set and start demon animation.
