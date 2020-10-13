@@ -4,82 +4,82 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>water_back_dance0001.png</key>
+            <key>fire_back_dance0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{247,531},{262,236}}</string>
+                <string>{{561,509},{262,234}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_dance0002.png</key>
+            <key>fire_back_dance0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{247,531},{262,236}}</string>
+                <string>{{561,509},{262,234}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_dance0003.png</key>
+            <key>fire_back_dance0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,7}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1569,269},{262,236}}</string>
+                <string>{{1619,1},{262,240}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>water_back_dance0004.png</key>
+            <key>fire_back_dance0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,7}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1569,269},{262,236}}</string>
+                <string>{{1619,1},{262,240}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>water_back_dance0005.png</key>
+            <key>fire_back_dance0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,7}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1569,269},{262,236}}</string>
+                <string>{{1619,1},{262,240}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>water_back_dance0006.png</key>
+            <key>fire_back_dance0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -90,11 +90,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1049,255},{258,250}}</string>
+                <string>{{1087,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_dance0007.png</key>
+            <key>fire_back_dance0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -105,11 +105,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1049,255},{258,250}}</string>
+                <string>{{1087,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_dance0008.png</key>
+            <key>fire_back_dance0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -120,26 +120,26 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1049,255},{258,250}}</string>
+                <string>{{1087,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_dance0009.png</key>
+            <key>fire_back_dance0009.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{247,531},{262,236}}</string>
+                <string>{{561,509},{262,234}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0001.png</key>
+            <key>fire_back_stand0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -150,11 +150,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0002.png</key>
+            <key>fire_back_stand0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -165,11 +165,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0003.png</key>
+            <key>fire_back_stand0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -180,11 +180,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0004.png</key>
+            <key>fire_back_stand0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -195,11 +195,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0005.png</key>
+            <key>fire_back_stand0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -210,11 +210,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0006.png</key>
+            <key>fire_back_stand0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -225,11 +225,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0007.png</key>
+            <key>fire_back_stand0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -240,11 +240,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0008.png</key>
+            <key>fire_back_stand0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -255,11 +255,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0009.png</key>
+            <key>fire_back_stand0009.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -270,11 +270,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0010.png</key>
+            <key>fire_back_stand0010.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -285,11 +285,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0011.png</key>
+            <key>fire_back_stand0011.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -300,11 +300,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0012.png</key>
+            <key>fire_back_stand0012.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -315,11 +315,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0013.png</key>
+            <key>fire_back_stand0013.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -330,11 +330,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0014.png</key>
+            <key>fire_back_stand0014.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -345,11 +345,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0015.png</key>
+            <key>fire_back_stand0015.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -360,11 +360,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0016.png</key>
+            <key>fire_back_stand0016.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -375,11 +375,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0017.png</key>
+            <key>fire_back_stand0017.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -390,11 +390,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0018.png</key>
+            <key>fire_back_stand0018.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -405,11 +405,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0019.png</key>
+            <key>fire_back_stand0019.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -420,11 +420,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0020.png</key>
+            <key>fire_back_stand0020.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -435,11 +435,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0021.png</key>
+            <key>fire_back_stand0021.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -450,11 +450,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0022.png</key>
+            <key>fire_back_stand0022.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -465,11 +465,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0023.png</key>
+            <key>fire_back_stand0023.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -480,11 +480,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0024.png</key>
+            <key>fire_back_stand0024.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -495,11 +495,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0025.png</key>
+            <key>fire_back_stand0025.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -510,11 +510,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0026.png</key>
+            <key>fire_back_stand0026.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -525,11 +525,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0027.png</key>
+            <key>fire_back_stand0027.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -540,11 +540,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0028.png</key>
+            <key>fire_back_stand0028.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -555,11 +555,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0029.png</key>
+            <key>fire_back_stand0029.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -570,11 +570,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0030.png</key>
+            <key>fire_back_stand0030.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -585,11 +585,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0031.png</key>
+            <key>fire_back_stand0031.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -600,11 +600,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0032.png</key>
+            <key>fire_back_stand0032.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -615,11 +615,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0033.png</key>
+            <key>fire_back_stand0033.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -630,11 +630,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0034.png</key>
+            <key>fire_back_stand0034.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -645,11 +645,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0035.png</key>
+            <key>fire_back_stand0035.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -660,11 +660,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0036.png</key>
+            <key>fire_back_stand0036.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -675,11 +675,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0037.png</key>
+            <key>fire_back_stand0037.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -690,11 +690,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0038.png</key>
+            <key>fire_back_stand0038.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -705,11 +705,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0039.png</key>
+            <key>fire_back_stand0039.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -720,11 +720,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0040.png</key>
+            <key>fire_back_stand0040.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -735,11 +735,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0041.png</key>
+            <key>fire_back_stand0041.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -750,11 +750,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0042.png</key>
+            <key>fire_back_stand0042.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -765,11 +765,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0043.png</key>
+            <key>fire_back_stand0043.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -780,11 +780,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0044.png</key>
+            <key>fire_back_stand0044.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -795,11 +795,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0045.png</key>
+            <key>fire_back_stand0045.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -810,11 +810,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0046.png</key>
+            <key>fire_back_stand0046.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -825,11 +825,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0047.png</key>
+            <key>fire_back_stand0047.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -840,11 +840,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0048.png</key>
+            <key>fire_back_stand0048.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -855,11 +855,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0049.png</key>
+            <key>fire_back_stand0049.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -870,11 +870,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0050.png</key>
+            <key>fire_back_stand0050.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -885,11 +885,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0051.png</key>
+            <key>fire_back_stand0051.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -900,11 +900,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0052.png</key>
+            <key>fire_back_stand0052.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -915,11 +915,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0053.png</key>
+            <key>fire_back_stand0053.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -930,11 +930,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0054.png</key>
+            <key>fire_back_stand0054.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -945,11 +945,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0055.png</key>
+            <key>fire_back_stand0055.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -960,11 +960,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0056.png</key>
+            <key>fire_back_stand0056.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -975,11 +975,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0057.png</key>
+            <key>fire_back_stand0057.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -990,11 +990,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0058.png</key>
+            <key>fire_back_stand0058.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1005,11 +1005,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0059.png</key>
+            <key>fire_back_stand0059.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1020,11 +1020,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0060.png</key>
+            <key>fire_back_stand0060.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1035,11 +1035,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0061.png</key>
+            <key>fire_back_stand0061.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1050,11 +1050,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0062.png</key>
+            <key>fire_back_stand0062.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1065,11 +1065,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0063.png</key>
+            <key>fire_back_stand0063.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1080,11 +1080,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0064.png</key>
+            <key>fire_back_stand0064.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1095,11 +1095,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0065.png</key>
+            <key>fire_back_stand0065.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1110,11 +1110,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0066.png</key>
+            <key>fire_back_stand0066.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1125,11 +1125,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0067.png</key>
+            <key>fire_back_stand0067.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1140,11 +1140,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0068.png</key>
+            <key>fire_back_stand0068.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1155,11 +1155,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0069.png</key>
+            <key>fire_back_stand0069.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1170,11 +1170,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0070.png</key>
+            <key>fire_back_stand0070.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1185,11 +1185,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0071.png</key>
+            <key>fire_back_stand0071.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1200,11 +1200,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0072.png</key>
+            <key>fire_back_stand0072.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1215,11 +1215,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0073.png</key>
+            <key>fire_back_stand0073.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1230,11 +1230,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_stand0074.png</key>
+            <key>fire_back_stand0074.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1245,11 +1245,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{485,531},{262,236}}</string>
+                <string>{{825,509},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_back_walk0001.png</key>
+            <key>fire_back_walk0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1264,7 +1264,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_walk0002.png</key>
+            <key>fire_back_walk0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1279,7 +1279,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_walk0003.png</key>
+            <key>fire_back_walk0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1290,11 +1290,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{833,1},{260,252}}</string>
+                <string>{{1,773},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_walk0004.png</key>
+            <key>fire_back_walk0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1305,11 +1305,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{833,1},{260,252}}</string>
+                <string>{{1,773},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_walk0005.png</key>
+            <key>fire_back_walk0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1320,11 +1320,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{833,1},{260,252}}</string>
+                <string>{{1,773},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_back_walk0006.png</key>
+            <key>fire_back_walk0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1339,97 +1339,82 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0001.png</key>
+            <key>fire_face_dance0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,509},{262,236}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_face_dance0002.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,5}</string>
-                <key>spriteSize</key>
-                <string>{262,236}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{983,509},{262,236}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_face_dance0003.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,5}</string>
-                <key>spriteSize</key>
-                <string>{262,236}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1221,507},{262,236}}</string>
+                <string>{{821,747},{262,234}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0004.png</key>
+            <key>fire_face_dance0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1221,507},{262,236}}</string>
+                <string>{{821,747},{262,234}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0005.png</key>
+            <key>fire_face_dance0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{-1,7}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{262,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1221,507},{262,236}}</string>
+                <string>{{1089,507},{262,240}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0006.png</key>
+            <key>fire_face_dance0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{0,4}</string>
+                <string>{-1,7}</string>
                 <key>spriteSize</key>
-                <string>{258,250}</string>
+                <string>{262,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1309,255},{258,250}}</string>
+                <string>{{1089,507},{262,240}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0007.png</key>
+            <key>fire_face_dance0005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,7}</string>
+                <key>spriteSize</key>
+                <string>{262,240}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1089,507},{262,240}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_face_dance0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1440,11 +1425,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1309,255},{258,250}}</string>
+                <string>{{1347,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0008.png</key>
+            <key>fire_face_dance0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1455,26 +1440,41 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1309,255},{258,250}}</string>
+                <string>{{1347,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_dance0009.png</key>
+            <key>fire_face_dance0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,5}</string>
+                <string>{0,4}</string>
                 <key>spriteSize</key>
-                <string>{262,236}</string>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1347,255},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_face_dance0009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,4}</string>
+                <key>spriteSize</key>
+                <string>{262,234}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,509},{262,236}}</string>
+                <string>{{821,747},{262,234}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_face_stand0001.png</key>
+            <key>fire_face_stand0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1485,11 +1485,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0002.png</key>
+            <key>fire_face_stand0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1500,11 +1500,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1221,745},{262,236}}</string>
+                <string>{{1085,749},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0003.png</key>
+            <key>fire_face_stand0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1515,11 +1515,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1221,745},{262,236}}</string>
+                <string>{{1085,749},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0004.png</key>
+            <key>fire_face_stand0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1530,11 +1530,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0005.png</key>
+            <key>fire_face_stand0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1545,11 +1545,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0006.png</key>
+            <key>fire_face_stand0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1560,11 +1560,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0007.png</key>
+            <key>fire_face_stand0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1575,11 +1575,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0008.png</key>
+            <key>fire_face_stand0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1590,11 +1590,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0009.png</key>
+            <key>fire_face_stand0009.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1605,11 +1605,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0010.png</key>
+            <key>fire_face_stand0010.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1620,11 +1620,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0011.png</key>
+            <key>fire_face_stand0011.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1635,11 +1635,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0012.png</key>
+            <key>fire_face_stand0012.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1650,11 +1650,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0013.png</key>
+            <key>fire_face_stand0013.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1665,11 +1665,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0014.png</key>
+            <key>fire_face_stand0014.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1680,11 +1680,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0015.png</key>
+            <key>fire_face_stand0015.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1695,11 +1695,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0016.png</key>
+            <key>fire_face_stand0016.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1710,11 +1710,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0017.png</key>
+            <key>fire_face_stand0017.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1725,11 +1725,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0018.png</key>
+            <key>fire_face_stand0018.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1740,11 +1740,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0019.png</key>
+            <key>fire_face_stand0019.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1755,11 +1755,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0020.png</key>
+            <key>fire_face_stand0020.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1770,11 +1770,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0021.png</key>
+            <key>fire_face_stand0021.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1785,11 +1785,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0022.png</key>
+            <key>fire_face_stand0022.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1800,11 +1800,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0023.png</key>
+            <key>fire_face_stand0023.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1815,11 +1815,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0024.png</key>
+            <key>fire_face_stand0024.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1830,11 +1830,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0025.png</key>
+            <key>fire_face_stand0025.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1845,11 +1845,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0026.png</key>
+            <key>fire_face_stand0026.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1860,11 +1860,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0027.png</key>
+            <key>fire_face_stand0027.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1875,11 +1875,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0028.png</key>
+            <key>fire_face_stand0028.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1890,11 +1890,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0029.png</key>
+            <key>fire_face_stand0029.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1905,11 +1905,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0030.png</key>
+            <key>fire_face_stand0030.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1920,11 +1920,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0031.png</key>
+            <key>fire_face_stand0031.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1935,11 +1935,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0032.png</key>
+            <key>fire_face_stand0032.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1950,11 +1950,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0033.png</key>
+            <key>fire_face_stand0033.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1965,11 +1965,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0034.png</key>
+            <key>fire_face_stand0034.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1980,11 +1980,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0035.png</key>
+            <key>fire_face_stand0035.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1995,11 +1995,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0036.png</key>
+            <key>fire_face_stand0036.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2010,11 +2010,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0037.png</key>
+            <key>fire_face_stand0037.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2025,11 +2025,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0038.png</key>
+            <key>fire_face_stand0038.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2040,11 +2040,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0039.png</key>
+            <key>fire_face_stand0039.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2055,11 +2055,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0040.png</key>
+            <key>fire_face_stand0040.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2070,11 +2070,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0041.png</key>
+            <key>fire_face_stand0041.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2085,11 +2085,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0042.png</key>
+            <key>fire_face_stand0042.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2100,11 +2100,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0043.png</key>
+            <key>fire_face_stand0043.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2115,11 +2115,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0044.png</key>
+            <key>fire_face_stand0044.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2130,11 +2130,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0045.png</key>
+            <key>fire_face_stand0045.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2145,11 +2145,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0046.png</key>
+            <key>fire_face_stand0046.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2160,11 +2160,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0047.png</key>
+            <key>fire_face_stand0047.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2175,11 +2175,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0048.png</key>
+            <key>fire_face_stand0048.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2190,11 +2190,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0049.png</key>
+            <key>fire_face_stand0049.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2205,11 +2205,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0050.png</key>
+            <key>fire_face_stand0050.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2220,11 +2220,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0051.png</key>
+            <key>fire_face_stand0051.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2235,11 +2235,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0052.png</key>
+            <key>fire_face_stand0052.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2250,11 +2250,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0053.png</key>
+            <key>fire_face_stand0053.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2265,11 +2265,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0054.png</key>
+            <key>fire_face_stand0054.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2280,11 +2280,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0055.png</key>
+            <key>fire_face_stand0055.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2295,11 +2295,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0056.png</key>
+            <key>fire_face_stand0056.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2310,11 +2310,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0057.png</key>
+            <key>fire_face_stand0057.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2325,11 +2325,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0058.png</key>
+            <key>fire_face_stand0058.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2340,11 +2340,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0059.png</key>
+            <key>fire_face_stand0059.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2355,11 +2355,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0060.png</key>
+            <key>fire_face_stand0060.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2370,11 +2370,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0061.png</key>
+            <key>fire_face_stand0061.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2385,11 +2385,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0062.png</key>
+            <key>fire_face_stand0062.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2400,11 +2400,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0063.png</key>
+            <key>fire_face_stand0063.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2415,11 +2415,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0064.png</key>
+            <key>fire_face_stand0064.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2430,11 +2430,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0065.png</key>
+            <key>fire_face_stand0065.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2445,11 +2445,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0066.png</key>
+            <key>fire_face_stand0066.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2460,11 +2460,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0067.png</key>
+            <key>fire_face_stand0067.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2475,11 +2475,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0068.png</key>
+            <key>fire_face_stand0068.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2490,11 +2490,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0069.png</key>
+            <key>fire_face_stand0069.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2505,11 +2505,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0070.png</key>
+            <key>fire_face_stand0070.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2520,11 +2520,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0071.png</key>
+            <key>fire_face_stand0071.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2535,11 +2535,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0072.png</key>
+            <key>fire_face_stand0072.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2550,11 +2550,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0073.png</key>
+            <key>fire_face_stand0073.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2565,11 +2565,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_stand0074.png</key>
+            <key>fire_face_stand0074.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2580,16 +2580,46 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_walk0001.png</key>
+            <key>fire_face_walk0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
                 <string>{0,-3}</string>
+                <key>spriteSize</key>
+                <string>{260,252}</string>
+                <key>spriteSourceSize</key>
+                <string>{304,304}</string>
+                <key>textureRect</key>
+                <string>{{833,1},{260,252}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_face_walk0002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,-3}</string>
+                <key>spriteSize</key>
+                <string>{260,252}</string>
+                <key>spriteSourceSize</key>
+                <string>{304,304}</string>
+                <key>textureRect</key>
+                <string>{{833,1},{260,252}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_face_walk0003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,-3}</string>
                 <key>spriteSize</key>
                 <string>{260,252}</string>
                 <key>spriteSourceSize</key>
@@ -2599,12 +2629,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_walk0002.png</key>
+            <key>fire_face_walk0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{0,-3}</string>
+                <string>{-1,-3}</string>
                 <key>spriteSize</key>
                 <string>{260,252}</string>
                 <key>spriteSourceSize</key>
@@ -2614,7 +2644,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_walk0003.png</key>
+            <key>fire_face_walk0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2625,41 +2655,11 @@
                 <key>spriteSourceSize</key>
                 <string>{304,304}</string>
                 <key>textureRect</key>
-                <string>{{1357,1},{260,252}}</string>
+                <string>{{1095,1},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_face_walk0004.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,-3}</string>
-                <key>spriteSize</key>
-                <string>{260,252}</string>
-                <key>spriteSourceSize</key>
-                <string>{304,304}</string>
-                <key>textureRect</key>
-                <string>{{1357,1},{260,252}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_face_walk0005.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,-3}</string>
-                <key>spriteSize</key>
-                <string>{260,252}</string>
-                <key>spriteSourceSize</key>
-                <string>{304,304}</string>
-                <key>textureRect</key>
-                <string>{{1357,1},{260,252}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_face_walk0006.png</key>
+            <key>fire_face_walk0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2670,11 +2670,101 @@
                 <key>spriteSourceSize</key>
                 <string>{304,304}</string>
                 <key>textureRect</key>
-                <string>{{271,269},{260,252}}</string>
+                <string>{{1357,1},{260,252}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1347,255},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1607,265},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1607,265},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1087,255},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1087,255},{258,250}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,4}</string>
+                <key>spriteSize</key>
+                <string>{258,250}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1353,507},{258,250}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>water_remove0001.png</key>
+            <key>fire_remove0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2685,11 +2775,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1309,255},{258,250}}</string>
+                <string>{{1353,507},{258,250}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>water_remove0002.png</key>
+            <key>fire_remove0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2700,101 +2790,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{459,795},{258,250}}</string>
+                <string>{{1347,255},{258,250}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0003.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{459,795},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0004.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1049,255},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0005.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1049,255},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0006.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{723,509},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0007.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{723,509},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0008.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,4}</string>
-                <key>spriteSize</key>
-                <string>{258,250}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1309,255},{258,250}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>water_remove0009.png</key>
+            <key>fire_remove0009.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2805,11 +2805,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,533},{262,236}}</string>
+                <string>{{1605,757},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0010.png</key>
+            <key>fire_remove0010.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2820,11 +2820,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1,531},{270,244}}</string>
+                <string>{{291,255},{270,244}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_remove0011.png</key>
+            <key>fire_remove0011.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2839,7 +2839,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0012.png</key>
+            <key>fire_remove0012.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2850,11 +2850,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{288,258}}</string>
+                <string>{{1,271},{288,258}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0013.png</key>
+            <key>fire_remove0013.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2865,11 +2865,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{723,761},{258,234}}</string>
+                <string>{{795,983},{258,234}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0014.png</key>
+            <key>fire_remove0014.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2880,116 +2880,116 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,1009},{230,208}}</string>
+                <string>{{1055,987},{230,208}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0015.png</key>
+            <key>fire_remove0015.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{0,0}</string>
+                <string>{-3,-3}</string>
                 <key>spriteSize</key>
-                <string>{204,206}</string>
+                <string>{212,204}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,1037},{204,206}}</string>
+                <string>{{1587,995},{212,204}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0016.png</key>
+            <key>fire_remove0016.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{2,-2}</string>
+                <string>{-6,-4}</string>
                 <key>spriteSize</key>
-                <string>{268,268}</string>
+                <string>{288,268}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1,261},{268,268}}</string>
+                <string>{{1,1},{288,268}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0017.png</key>
+            <key>fire_remove0017.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{3,19}</string>
+                <string>{-3,16}</string>
                 <key>spriteSize</key>
-                <string>{264,242}</string>
+                <string>{278,240}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1,803},{264,242}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_remove0018.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{1,39}</string>
-                <key>spriteSize</key>
-                <string>{264,212}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{245,803},{264,212}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_remove0019.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,55}</string>
-                <key>spriteSize</key>
-                <string>{266,186}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1619,1},{266,186}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_remove0020.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,61}</string>
-                <key>spriteSize</key>
-                <string>{268,174}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1,1069},{268,174}}</string>
+                <string>{{1,531},{278,240}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0021.png</key>
+            <key>fire_remove0018.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,68}</string>
+                <string>{0,36}</string>
                 <key>spriteSize</key>
-                <string>{268,164}</string>
+                <string>{268,210}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{271,1069},{268,164}}</string>
+                <string>{{291,501},{268,210}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_remove0022.png</key>
+            <key>fire_remove0019.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,55}</string>
+                <key>spriteSize</key>
+                <string>{264,186}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1,1027},{264,186}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0020.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,63}</string>
+                <key>spriteSize</key>
+                <string>{268,178}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{281,713},{268,178}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0021.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,69}</string>
+                <key>spriteSize</key>
+                <string>{268,166}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{551,745},{268,166}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>fire_remove0022.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3000,11 +3000,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{271,261},{3,3}}</string>
+                <string>{{1,1215},{3,3}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_dance0001.png</key>
+            <key>fire_side_dance0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3015,11 +3015,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,771},{262,236}}</string>
+                <string>{{1349,767},{262,236}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>water_side_dance0002.png</key>
+            <key>fire_side_dance0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3030,56 +3030,56 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,771},{262,236}}</string>
+                <string>{{1349,767},{262,236}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>water_side_dance0003.png</key>
+            <key>fire_side_dance0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,4}</string>
+                <string>{-1,6}</string>
                 <key>spriteSize</key>
-                <string>{262,234}</string>
+                <string>{262,238}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{719,997},{262,234}}</string>
+                <string>{{1605,517},{262,238}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_dance0004.png</key>
+            <key>fire_side_dance0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,4}</string>
+                <string>{-1,6}</string>
                 <key>spriteSize</key>
-                <string>{262,234}</string>
+                <string>{262,238}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{719,997},{262,234}}</string>
+                <string>{{1605,517},{262,238}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_dance0005.png</key>
+            <key>fire_side_dance0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>spriteOffset</key>
-                <string>{-1,4}</string>
+                <string>{-1,6}</string>
                 <key>spriteSize</key>
-                <string>{262,234}</string>
+                <string>{262,238}</string>
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{719,997},{262,234}}</string>
+                <string>{{1605,517},{262,238}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_dance0006.png</key>
+            <key>fire_side_dance0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3090,11 +3090,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{723,509},{258,250}}</string>
+                <string>{{1353,507},{258,250}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>water_side_dance0007.png</key>
+            <key>fire_side_dance0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3105,11 +3105,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{723,509},{258,250}}</string>
+                <string>{{1353,507},{258,250}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>water_side_dance0008.png</key>
+            <key>fire_side_dance0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3120,11 +3120,41 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{723,509},{258,250}}</string>
+                <string>{{1353,507},{258,250}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>fire_side_dance0009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,5}</string>
+                <key>spriteSize</key>
+                <string>{262,236}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{1349,767},{262,236}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>fire_side_stand0001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,5}</string>
+                <key>spriteSize</key>
+                <string>{262,236}</string>
+                <key>spriteSourceSize</key>
+                <string>{512,512}</string>
+                <key>textureRect</key>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_dance0009.png</key>
+            <key>fire_side_stand0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3135,11 +3165,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1485,771},{262,236}}</string>
+                <string>{{531,913},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_stand0001.png</key>
+            <key>fire_side_stand0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3150,26 +3180,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_side_stand0002.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,5}</string>
-                <key>spriteSize</key>
-                <string>{262,236}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{1221,983},{262,236}}</string>
+                <string>{{531,913},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_stand0003.png</key>
+            <key>fire_side_stand0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3180,11 +3195,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{1221,983},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_stand0004.png</key>
+            <key>fire_side_stand0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3195,11 +3210,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0005.png</key>
+            <key>fire_side_stand0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3210,11 +3225,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0006.png</key>
+            <key>fire_side_stand0007.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3225,11 +3240,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0007.png</key>
+            <key>fire_side_stand0008.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3240,11 +3255,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0008.png</key>
+            <key>fire_side_stand0009.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3255,11 +3270,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0009.png</key>
+            <key>fire_side_stand0010.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3270,11 +3285,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0010.png</key>
+            <key>fire_side_stand0011.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3285,11 +3300,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0011.png</key>
+            <key>fire_side_stand0012.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3300,11 +3315,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0012.png</key>
+            <key>fire_side_stand0013.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3315,11 +3330,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0013.png</key>
+            <key>fire_side_stand0014.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3330,11 +3345,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0014.png</key>
+            <key>fire_side_stand0015.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3345,11 +3360,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0015.png</key>
+            <key>fire_side_stand0016.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3360,11 +3375,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0016.png</key>
+            <key>fire_side_stand0017.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3375,11 +3390,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0017.png</key>
+            <key>fire_side_stand0018.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3390,11 +3405,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0018.png</key>
+            <key>fire_side_stand0019.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3405,11 +3420,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0019.png</key>
+            <key>fire_side_stand0020.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3420,11 +3435,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0020.png</key>
+            <key>fire_side_stand0021.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3435,11 +3450,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0021.png</key>
+            <key>fire_side_stand0022.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3450,11 +3465,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0022.png</key>
+            <key>fire_side_stand0023.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3465,11 +3480,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0023.png</key>
+            <key>fire_side_stand0024.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3480,11 +3495,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0024.png</key>
+            <key>fire_side_stand0025.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3495,11 +3510,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0025.png</key>
+            <key>fire_side_stand0026.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3510,11 +3525,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0026.png</key>
+            <key>fire_side_stand0027.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3525,11 +3540,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0027.png</key>
+            <key>fire_side_stand0028.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3540,11 +3555,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0028.png</key>
+            <key>fire_side_stand0029.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3555,11 +3570,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0029.png</key>
+            <key>fire_side_stand0030.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3570,11 +3585,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0030.png</key>
+            <key>fire_side_stand0031.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3585,11 +3600,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0031.png</key>
+            <key>fire_side_stand0032.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3600,11 +3615,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0032.png</key>
+            <key>fire_side_stand0033.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3615,11 +3630,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0033.png</key>
+            <key>fire_side_stand0034.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3630,11 +3645,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0034.png</key>
+            <key>fire_side_stand0035.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3645,11 +3660,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0035.png</key>
+            <key>fire_side_stand0036.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3660,11 +3675,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0036.png</key>
+            <key>fire_side_stand0037.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3675,11 +3690,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0037.png</key>
+            <key>fire_side_stand0038.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3690,11 +3705,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0038.png</key>
+            <key>fire_side_stand0039.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3705,11 +3720,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0039.png</key>
+            <key>fire_side_stand0040.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3720,11 +3735,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0040.png</key>
+            <key>fire_side_stand0041.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3735,11 +3750,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0041.png</key>
+            <key>fire_side_stand0042.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3750,11 +3765,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0042.png</key>
+            <key>fire_side_stand0043.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3765,11 +3780,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0043.png</key>
+            <key>fire_side_stand0044.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3780,11 +3795,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0044.png</key>
+            <key>fire_side_stand0045.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3795,11 +3810,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0045.png</key>
+            <key>fire_side_stand0046.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3810,11 +3825,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0046.png</key>
+            <key>fire_side_stand0047.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3825,11 +3840,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0047.png</key>
+            <key>fire_side_stand0048.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3840,11 +3855,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0048.png</key>
+            <key>fire_side_stand0049.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3855,11 +3870,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0049.png</key>
+            <key>fire_side_stand0050.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3870,11 +3885,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0050.png</key>
+            <key>fire_side_stand0051.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3885,11 +3900,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0051.png</key>
+            <key>fire_side_stand0052.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3900,11 +3915,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0052.png</key>
+            <key>fire_side_stand0053.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3915,11 +3930,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0053.png</key>
+            <key>fire_side_stand0054.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3930,11 +3945,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0054.png</key>
+            <key>fire_side_stand0055.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3945,11 +3960,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0055.png</key>
+            <key>fire_side_stand0056.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3960,11 +3975,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0056.png</key>
+            <key>fire_side_stand0057.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3975,11 +3990,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0057.png</key>
+            <key>fire_side_stand0058.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -3990,11 +4005,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0058.png</key>
+            <key>fire_side_stand0059.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4005,11 +4020,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0059.png</key>
+            <key>fire_side_stand0060.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4020,11 +4035,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0060.png</key>
+            <key>fire_side_stand0061.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4035,11 +4050,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0061.png</key>
+            <key>fire_side_stand0062.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4050,11 +4065,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0062.png</key>
+            <key>fire_side_stand0063.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4065,11 +4080,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0063.png</key>
+            <key>fire_side_stand0064.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4080,11 +4095,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0064.png</key>
+            <key>fire_side_stand0065.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4095,11 +4110,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0065.png</key>
+            <key>fire_side_stand0066.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4110,11 +4125,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0066.png</key>
+            <key>fire_side_stand0067.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4125,11 +4140,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0067.png</key>
+            <key>fire_side_stand0068.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4140,11 +4155,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0068.png</key>
+            <key>fire_side_stand0069.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4155,11 +4170,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0069.png</key>
+            <key>fire_side_stand0070.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4170,11 +4185,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0070.png</key>
+            <key>fire_side_stand0071.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4185,11 +4200,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0071.png</key>
+            <key>fire_side_stand0072.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4200,11 +4215,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0072.png</key>
+            <key>fire_side_stand0073.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4215,11 +4230,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0073.png</key>
+            <key>fire_side_stand0074.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4230,26 +4245,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
+                <string>{{267,893},{262,236}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>water_side_stand0074.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{-1,5}</string>
-                <key>spriteSize</key>
-                <string>{262,236}</string>
-                <key>spriteSourceSize</key>
-                <string>{512,512}</string>
-                <key>textureRect</key>
-                <string>{{983,773},{262,236}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>water_side_walk0001.png</key>
+            <key>fire_side_walk0001.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4260,11 +4260,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{525,255},{260,252}}</string>
+                <string>{{563,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_walk0002.png</key>
+            <key>fire_side_walk0002.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4275,11 +4275,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{525,255},{260,252}}</string>
+                <string>{{563,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_walk0003.png</key>
+            <key>fire_side_walk0003.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4290,11 +4290,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{787,255},{260,252}}</string>
+                <string>{{825,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_walk0004.png</key>
+            <key>fire_side_walk0004.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4305,11 +4305,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{787,255},{260,252}}</string>
+                <string>{{825,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_walk0005.png</key>
+            <key>fire_side_walk0005.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4320,11 +4320,11 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{787,255},{260,252}}</string>
+                <string>{{825,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>water_side_walk0006.png</key>
+            <key>fire_side_walk0006.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -4335,7 +4335,7 @@
                 <key>spriteSourceSize</key>
                 <string>{512,512}</string>
                 <key>textureRect</key>
-                <string>{{525,255},{260,252}}</string>
+                <string>{{563,255},{260,252}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -4349,13 +4349,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>demonWaterAssets.png</string>
+            <string>demonFireAssets.png</string>
             <key>size</key>
-            <string>{1806,1244}</string>
+            <string>{1868,1219}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ed9563f612f80ebdfc0d00bf0b442f05:65c219b22521adc080a6fa03aa06891a:0d11148e782a7e4eccee88eec5e9b6ba$</string>
+            <string>$TexturePacker:SmartUpdate:b9f6fced21df919ab7b6a6f8e77800a4:d8246f8c9f7980cd2900734c884f9866:20430b38bf888c09c03524931af822d4$</string>
             <key>textureFileName</key>
-            <string>demonWaterAssets.png</string>
+            <string>demonFireAssets.png</string>
         </dict>
     </dict>
 </plist>

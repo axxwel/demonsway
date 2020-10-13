@@ -30,14 +30,22 @@ bool Demon::init()
 {
     // init demon random type and direction
     srand((unsigned)time(NULL));
-    _nameIndex = 1;//rand() % 9;
-    _wayIndex = 0;//rand() % 4;
+    _nameIndex = rand() % 9;
+    _wayIndex = rand() % 4;
     
     const std::string nameStr = NAME_ARRAY[_nameIndex];
     const std::string wayStr = WAY_ARRAY[_wayIndex];
     
-    // create and add demon
+    // create demon
     _demonSprite = Sprite::createWithSpriteFrameName(nameStr + "_" + wayStr + "_stand0001.png");
+    
+    // invert side when demon go right
+    if(_wayIndex == 2)
+    {
+        _demonSprite->setScale(-1, 1);
+    }
+    
+    // add demon
     this->addChild(_demonSprite);
     
     return true;
@@ -58,6 +66,8 @@ bool Demon::action(DemonAction demonAction)
         case waiting     : setAnimation(nameStr + "_" + wayStr + "_stand", 74);break;
         case dance       : setAnimation(nameStr + "_" + wayStr + "_dance", 9);break;
         case walk        : setAnimation(nameStr + "_" + wayStr + "_walk", 6);break;
+        case removing      : setAnimation(nameStr + "_remove", 22);break;
+            
         default          : break;
     }
     return true;

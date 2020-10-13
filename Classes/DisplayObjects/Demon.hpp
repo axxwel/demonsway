@@ -13,9 +13,9 @@
 enum DemonAction {
     enterDiving,
     waiting,
-    blink,
     dance,
-    walk
+    walk,
+    removing
 };
 
 class Demon : public cocos2d::Node

@@ -120,7 +120,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     // add sprite sheet image list
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("demonWaterAssets.plist");
+    
+    // add animation demons sprite sheet
+    const std::string DEMONS_NAMES_ARRAY[9] = {"Air","Water","Fire","Forest","Day","Mecha","Night","Time","Ground"};
+    for(int i = 0; i < 9; i++)
+    {
+        SpriteFrameCache::getInstance()->addSpriteFramesWithFile("demon" + DEMONS_NAMES_ARRAY[i] + "Assets.plist");
+    }
     
     register_all_packages();
 
