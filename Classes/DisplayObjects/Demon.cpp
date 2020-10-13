@@ -31,7 +31,7 @@ bool Demon::init()
     // init demon random type and direction
     srand((unsigned)time(NULL));
     _nameIndex = rand() % 9;
-    _wayIndex = rand() % 4;
+    _wayIndex = 2;//rand() % 4;
     
     const std::string nameStr = NAME_ARRAY[_nameIndex];
     const std::string wayStr = WAY_ARRAY[_wayIndex];
