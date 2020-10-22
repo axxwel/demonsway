@@ -8,6 +8,7 @@
 #include "DisplayDemonsGrid.hpp"
 
 #include "../Models/StaticGrid.hpp"
+#include "../Models/StaticTest.hpp"
 
 USING_NS_CC;
 
@@ -34,26 +35,53 @@ bool DisplayDemonsGrid::init(cocos2d::Sprite* divingBoard)
     _divingBoard = divingBoard;
     
     //clean demons arrays
-    _demonsMovedList.clear();
-    _demonsGrid.clear();
+    _demonsActionList.clear();
+    _demonsInGridList.clear();
     
-    //init new demon grid
-    for(int l = 0; l < GRID_SIZE; l++)
-    {
-        std::vector<Demon*> demonGridLine;
-        for(int c = 0; c < GRID_SIZE; c++)
-        {
-            demonGridLine.push_back(nullptr);
-        }
-        _demonsGrid.push_back(demonGridLine);
-    }
-    
-    addNewDemon();
+    // add new random demon on diving board
+    addNewDemonDiver();
     
     return true;
 }
 
-bool DisplayDemonsGrid::addNewDemon()
+bool DisplayDemonsGrid::addDemonGrid(int l, int c)
+{
+    // check if demon is ready to jump in demon grid
+    if(!_demonDiver)
+        return false;
+    
+    // check if demon grid case is free
+    if(!StaticTest::getCaseFree(l, c, _demonsInGridList))
+        return false;
+    
+    // init jumper demon pointer
+    Demon* demon = _demonDiver;
+    
+    // reset the demon diver pointer
+    _demonDiver = nullptr;
+    
+    // get grid pixel position
+    Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
+    
+    // demon jump to grid position
+    auto move = MoveTo::create(MOVE_TIME, posDemon);
+    auto scaleUp = ScaleTo::create(MOVE_TIME/2, JUMP_SCALE);
+    auto scaleDown = ScaleTo::create(MOVE_TIME/2, DEMON_IN_GRID_SCALE);
+    auto scaleSeq = Sequence::create(scaleUp, scaleDown, NULL);
+    auto callFunc = CallFunc::create([=]()
+    {
+        demon->action(waiting);
+        setInGrid(demon, l, c);
+        startActionGrid();
+    });
+    auto seq = Sequence::create(Spawn::create(scaleSeq, move, NULL), callFunc, NULL);
+    demon->runAction(seq);
+    demon->action(dance);
+    
+    return true;
+}
+
+bool DisplayDemonsGrid::addNewDemonDiver()
 {
     // reset the demon diver pointer
     _demonDiver = nullptr;
@@ -81,135 +109,125 @@ bool DisplayDemonsGrid::addNewDemon()
     return true;
 }
 
-bool DisplayDemonsGrid::addDemonGrid(int l, int c)
+void DisplayDemonsGrid::startActionGrid(int actionTurn)
 {
-    // check if demon is ready to jump in demon grid
-    if(!_demonDiver)
-        return false;
+    _actionTurn = actionTurn;
     
-    // check if demon grid case is free
-    if(_demonsGrid[l][c] != nullptr)
-        return false;
-    
-    // init jumper demon pointer
-    Demon* demon = _demonDiver;
-    
-    // reset the demon diver pointer
-    _demonDiver = nullptr;
-    
-    //get demon grid pixel position
-    Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
-    
-    // move demon to grid position
-    auto move = MoveTo::create(MOVE_TIME, posDemon);
-    auto scaleUp = ScaleTo::create(MOVE_TIME/2, JUMP_SCALE);
-    auto scaleDown = ScaleTo::create(MOVE_TIME/2, DEMON_IN_GRID_SCALE);
-    auto scaleSeq = Sequence::create(scaleUp, scaleDown, NULL);
-    auto callFunc = CallFunc::create([=]()
+    if(_actionTurn <= 0)
     {
-        demon->action(waiting);
-        _demonsGrid[l][c] = demon;
-        moveDemonsGrid();
-    });
-    auto seq = Sequence::create(Spawn::create(scaleSeq, move, NULL), callFunc, NULL);
-    demon->runAction(seq);
-    demon->action(dance);
+        printf("START_ACTION===========================\n");
+        _demonsActionList.clear();
+        
+        _demonsActionList.insert(_demonsActionList.begin(), _demonsInGridList.begin(), _demonsInGridList.end());
+    }
     
-    return true;
+    printf("turn(start) = %i\n", _actionTurn);
+    
+    bool demonMoved = moveDemonsGrid();
+    
+    if(_demonsActionList.size() <= 0 || !demonMoved)
+    {
+        printf("END_ACTION=================================\n");
+        _actionTurn = 0;
+        addNewDemonDiver();
+    }
+    else
+    {
+        printf("LISTENER_END_TURN\n");
+        _actionTurn ++;
+        _eventDispatcher->addCustomEventListener("DEMONS_ANIMATIONS_ENDS",[this](EventCustom* event)
+        {
+            printf("END_TURN\n");
+            _eventDispatcher->removeCustomEventListeners("DEMONS_ANIMATIONS_ENDS");
+            printf("turn(end) = %i\n", _actionTurn);
+            startActionGrid(_actionTurn);
+        });
+    }
 }
 
 bool DisplayDemonsGrid::moveDemonsGrid()
 {
-    _noDemonsMoved = true;
+    // is a demon move boolean init
+    bool demonMoved = false;
     
-    for(int l = 0; l < GRID_SIZE; l++)
+    // init demon can move list
+    _demonsToMoveList.clear();
+    std::vector<Demon*>::iterator moveIt;
+    _demonsToMoveList = StaticTest::getMoveDemonList(_demonsActionList, _demonsInGridList);
+    
+    
+    for(moveIt = _demonsToMoveList.begin(); moveIt != _demonsToMoveList.end(); moveIt++)
     {
-        for(int c = 0; c < GRID_SIZE; c++)
-        {
-            Demon* demon = _demonsGrid[l][c];
-            if(demon)
-            {
-                // set moving grid case new line (int newL), new collumn (int newC)
-                int wayIndex = demon->getWayIndex();
-                int newL = l;
-                int newC = c;
-                switch (wayIndex) {
-                    case 0: newL +=1; break;
-                    case 1: newC -=1; break;
-                    case 2: newC +=1; break;
-                    case 3: newL -=1; break;
-                        
-                    default: break;
-                }
-                
-                // check if new case is out of grid
-                if(newL >= 0 && newL < GRID_SIZE && newC >= 0 && newC < GRID_SIZE)
-                {
-                    // check if new case is free
-                    if(_demonsGrid[newL][newC] == nullptr)
-                    {
-                        // check if moving demon had already moved
-                        bool demonAlreadyMoved = false;
-                        Vector<Demon*>::iterator dIt;
-                        for(dIt = _demonsMovedList.begin(); dIt != _demonsMovedList.end(); dIt++)
-                        {
-                            if(demon == *dIt)
-                            {
-                                demonAlreadyMoved = true;
-                            }
-                        }
-                        if(demonAlreadyMoved == false)
-                        {
-                            // if all flags ok move demon and push it in already moved list.
-                            _noDemonsMoved = false;
-                            _demonsMovedList.push_back(demon);
-                            moveDemon(demon, l, c, newL, newC);
-                        }
-                    }
-                }
-            }
-        }
+        demonMoved = true;
+        
+        // move demon of the list
+        Demon* movingDemon = *moveIt;
+        moveDemon(movingDemon);
+        
+        // remove demon from the action list
+         _demonsActionList.erase(std::find(_demonsActionList.begin(), _demonsActionList.end(), movingDemon));
     }
-    // wait demon move turn end to move the grid another time
-    float delay = MOVE_TIME + 0.1;
-    auto delayTime = DelayTime::create(delay);
-    auto callFunc = CallFunc::create([this](){
-        // check if all demon moved
-        if(_noDemonsMoved)
-        {
-            _demonsMovedList.clear();
-            addNewDemon();
-        }
-        else
-        {
-            moveDemonsGrid();
-        }
-    });
-    this->runAction(Sequence::create(delayTime, callFunc, NULL));
     
-    
-    return true;
+    return demonMoved;
 }
 
-bool DisplayDemonsGrid::moveDemon(Demon* demon, int oldL, int oldC, int newL, int newC)
+bool DisplayDemonsGrid::moveDemon(Demon* demon)
 {
-    if(!demon)
-        return false;
-    
     //get demon grid pixel position
+    DemonPosition demonWayPos = demon->getDemonGridWayPosition();
+    const int newL = demonWayPos.line;
+    const int newC = demonWayPos.collumn;
     Vec2 posDemon = StaticGrid::getPositionXY(Vec2(newL, newC));
     
-    // move demon to grid position and refresh grid
+    // move demon to grid position
     auto move = MoveTo::create(MOVE_TIME, posDemon);
-    auto callFunc = CallFunc::create([=]()
+    auto callFunc = CallFunc::create([demon,newL,newC,this]()
     {
+        // init action ended
         demon->action(waiting);
-        _demonsGrid[newL][newC] = demon;
-        _demonsGrid[oldL][oldC] = nullptr;
+        setInGrid(demon, newL, newC);
+        
+        // remove demon from move list
+        _demonsToMoveList.erase(std::find(_demonsToMoveList.begin(), _demonsToMoveList.end(), demon));
+        
+        // test if is the last action
+        areDemonsAnimationsEnds();
     });
+    
+    // run action
     auto seq = Sequence::create(move, callFunc, NULL);
     demon->runAction(seq);
     demon->action(walk);
     
     return true;
 }
+
+void DisplayDemonsGrid::setInGrid(Demon* demon, int line, int collumn)
+{
+    // init demon : name and position
+    demon->setName("DEMON_" + std::to_string(line) + "_" + std::to_string(collumn));
+    demon->setGridPosition(line, collumn);
+    
+    // push demon in demon grid list
+    std::vector<Demon*>::iterator demonIt;
+    demonIt = std::find(_demonsInGridList.begin(), _demonsInGridList.end(), demon);
+    if(demonIt == _demonsInGridList.end())
+    {
+        _demonsInGridList.push_back(demon);
+    }
+}
+
+bool DisplayDemonsGrid::areDemonsAnimationsEnds()
+{
+    if(_demonsToMoveList.size() > 0)
+    {
+        return false;
+    }
+    
+    _eventDispatcher->dispatchCustomEvent("DEMONS_ANIMATIONS_ENDS");
+    
+    return true;
+}
+
+
+

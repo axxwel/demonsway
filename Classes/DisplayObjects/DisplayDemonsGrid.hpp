@@ -8,6 +8,8 @@
 #ifndef DisplayDemonsGrid_hpp
 #define DisplayDemonsGrid_hpp
 
+#include "cocos2d.h"
+
 #include "../DisplayObjects/Demon.hpp"
 
 class DisplayDemonsGrid : public cocos2d::Node
@@ -18,7 +20,7 @@ public:
     virtual bool init(cocos2d::Sprite* divingBoard);
     
     /**
-     * @brief add new demon in demon grid.
+     * @brief add new demon into the grid.
      * @param l grid line.
      * @param c grid collumn
      * @return action type OK.
@@ -32,34 +34,52 @@ private:
     
     cocos2d::Sprite* _divingBoard = nullptr;
     
-    std::vector<Demon*> _demonsMovedList;
+    int _actionTurn = 0;
     
-    std::vector<std::vector<Demon*>> _demonsGrid;
+    std::vector<Demon*> _demonsInGridList;
+    
+    std::vector<Demon*> _demonsActionList;
+    
+    std::vector<Demon*> _demonsToMoveList;
     
     // pointer to demon ready to jump in grid
     Demon* _demonDiver = nullptr;
     
-    bool _noDemonsMoved = true;
-    
     /**
-     * @brief add new demon in demon grid.
+     * @brief add new demon on the diving board
      * @return action type OK.
     */
-    bool addNewDemon();
+    bool addNewDemonDiver();
     
     /**
-     * @brief move demons in the grid.
-     * @return action type OK.
+     * @brief run all action in  grid.
+     * @param turn number of times the function has been used.
+    */
+    void startActionGrid(int turn = 0);
+    
+    /**
+     * @brief move demon in  grid.
+     * @return a demon moved (true or false).
     */
     bool moveDemonsGrid();
     
     /**
-     * @brief move demon in demon grid.
+     * @brief move demon in  grid.
+     * @param demon  moving demon.
+     * @return action type OK.
+    */
+    bool moveDemon(Demon* demon);
+    
+    /**
+     * @brief add new demon in demon grid vector.
+     * @param demon demon pointer will added into the grid.
      * @param l grid line.
      * @param c grid collumn
      * @return action type OK.
     */
-    bool moveDemon(Demon* demon, int oldL, int oldC, int newL, int newC);
+    void setInGrid(Demon* demon, int l, int c);
+    
+    bool areDemonsAnimationsEnds();
 };
 
 #endif /* DisplayDemonsGrid_hpp */

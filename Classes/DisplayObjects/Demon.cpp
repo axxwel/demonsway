@@ -11,6 +11,7 @@ USING_NS_CC;
 
 Demon* Demon::create()
 {
+    //create new instance pointer
     Demon* ret = new (std::nothrow) Demon();
     if(ret && ret->init ())
     {
@@ -30,80 +31,160 @@ bool Demon::init()
 {
     // init demon random type and direction
     srand((unsigned)time(NULL));
-    _nameIndex = rand() % 9;
-    _wayIndex = 2;//rand() % 4;
+    _nameIndex = 1;//rand() % 9;
+    _wayIndex = rand() % 2 + 1;//rand() % 4;
     
+    // init demon string
     const std::string nameStr = NAME_ARRAY[_nameIndex];
     const std::string wayStr = WAY_ARRAY[_wayIndex];
     
-    // create demon
+    // create demon sprite
     _demonSprite = Sprite::createWithSpriteFrameName(nameStr + "_" + wayStr + "_stand0001.png");
     
-    // invert side when demon go right
+    // invert side when demon go right way
     if(_wayIndex == 2)
     {
         _demonSprite->setScale(-1, 1);
     }
     
-    // add demon
+    // add demon sprite
     this->addChild(_demonSprite);
     
     return true;
 }
 
-bool Demon::action(DemonAction demonAction)
+void Demon::action(DemonAction demonAction)
 {
     // before start new action reset animation
-    _demonSprite->stopAllActions();
+    _demonSprite->stopAction(_demonAction);
     
+    // set string init value
     const std::string nameStr = NAME_ARRAY[_nameIndex];
     const std::string wayStr = WAY_ARRAY[_wayIndex];
     
-    // select animation (animetion name, animation frame number)
+    // select animation (animation name, animation frame number, animation function)
     switch(demonAction)
     {
-        case enterDiving : setAnimation(nameStr + "_back_walk", 6); break;
-        case waiting     : setAnimation(nameStr + "_" + wayStr + "_stand", 74);break;
-        case dance       : setAnimation(nameStr + "_" + wayStr + "_dance", 9);break;
-        case walk        : setAnimation(nameStr + "_" + wayStr + "_walk", 6);break;
-        case removing      : setAnimation(nameStr + "_remove", 22);break;
+        case enterDiving:
+            setAnimation(createAnimFrames(nameStr + "_back_walk", 6));
+            break;
+        case waiting:
+            setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_stand", 74));
+            break;
+        case dance:
+            setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_dance", 9));
+            break;
+        case walk:
+            setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_walk", 6));
+            break;
+        case removing:
+            setAnimation(createAnimFrames(nameStr + "_remove", 22), removeDemon);
+            break;
             
-        default          : break;
+        default:
+            break;
     }
-    return true;
 }
 
-bool Demon::setAnimation(std::string animName, int count)
+cocos2d::Vector<cocos2d::SpriteFrame*> Demon::createAnimFrames(std::string animName, int count)
 {
     // get sprite cache instance (init in appDelegate)
     auto spriteCache = SpriteFrameCache::getInstance();
     
-    // create animation frame vector
+    // create animation frame array
     cocos2d::Vector<cocos2d::SpriteFrame*> animFrames;
     
-    // format frame name
-    char* imageNbr;
-    std::string str = animName + "%04d.png";
+    // format frame name to char array, add frame number and image extention
+    std::string s = animName + "%04d.png";
+    int n = s.length();
+    char char_anim[n + 1];
+    strcpy(char_anim, s.c_str());
     
+    // fill animation array
+    char str[100];
     for(int i = 1; i <= count; i++)
     {
-        // set frame name number
-        sprintf(imageNbr,str.c_str(),i);
+        // add frame name number
+        sprintf(str,char_anim,i);
         
         // push sprite frame in animation vector
-        auto sprite = spriteCache->getSpriteFrameByName(imageNbr);
+        auto sprite = spriteCache->getSpriteFrameByName(str);
         if(sprite != nullptr)
         {
-            
             animFrames.pushBack(sprite);
         }
     }
     
-    // set animation FPS and run animation
+    return animFrames;
+}
+
+bool Demon::setAnimation(cocos2d::Vector<cocos2d::SpriteFrame*> animFrames, DemonActionFunc animFunc)
+{
+    // set animation FPS
     auto animation = Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
-    _demonSprite->runAction(RepeatForever::create(Animate::create(animation)));
+    
+    // create action pointer
+    _demonAction = nullptr;
+    
+    // merge animation and function to ation pointer
+    switch (animFunc) {
+        case repeatAninForever:
+            _demonAction = RepeatForever::create(Animate::create(animation));
+            break;
+        case removeDemon:
+            
+            //
+            _demonAction = Sequence::create(Animate::create(animation), CallFunc::create([=](){
+                printf("%s",_name.c_str());
+                _eventDispatcher->dispatchCustomEvent(_name + "_REMOVE_END");
+                //this->removeFromParent();
+                //demonRemoveCallback();
+            }), NULL);
+        break;
+            
+        default:
+            break;
+    }
+    
+    // run demon action
+    _demonSprite->runAction(_demonAction);
     
     return true;
+}
+
+void Demon::setGridPosition(int line, int collumn)
+{
+    _line = line;
+    _collumn = collumn;
+}
+
+DemonPosition Demon::getDemonGridPosition()
+{
+    DemonPosition demonPosition;
+    demonPosition.line = _line;
+    demonPosition.collumn = _collumn;
+    
+    return demonPosition;
+}
+
+DemonPosition Demon::getDemonGridWayPosition()
+{
+    int wayL = _line;
+    int wayC = _collumn;
+    
+    switch (_wayIndex) {
+        case 0: wayL +=1; break; // up
+        case 1: wayC -=1; break; // left
+        case 2: wayC +=1; break; // right
+        case 3: wayL -=1; break; // down
+        default: break;
+    }
+    
+    DemonPosition demonPosition;
+    demonPosition.line = wayL;
+    demonPosition.collumn = wayC;
+    
+    return demonPosition;
 }
 
 int Demon::getNameIndex()
@@ -113,4 +194,14 @@ int Demon::getNameIndex()
 int Demon::getWayIndex()
 {
     return _wayIndex;
+}
+int Demon::getPositionIndex()
+{
+    return _line * 10 + _collumn;
+}
+
+void Demon::demonRemoveCallback()
+{
+    this->removeFromParent();
+    _eventDispatcher->dispatchCustomEvent(_name + "_REMOVE_END");
 }
