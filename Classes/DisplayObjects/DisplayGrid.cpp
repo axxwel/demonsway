@@ -27,8 +27,6 @@ DisplayGrid* DisplayGrid::create()
 
 bool DisplayGrid::init()
 {
-    // get sprite sheet image list
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
     
     auto gridContainer = Node::create();
     this->addChild(gridContainer, 1);

@@ -62,6 +62,22 @@ private:
      * @return true if case free false else.
     */
     static bool isConflictCaseWin(std::vector<Demon*> demonsList, Demon* demon);
+    
+    /**
+     * @brief test if two demon had same name index.
+     * @param demonMtch pointer to the demon mathc structure bitween the two demon.
+     * @param demon_1 demon 1 to test.
+     * @param demon_2 demon 2 to test.
+    */
+    static void testDemonMatch(DemonMatch* demonMtch, Demon* demon_1, Demon* demon_2);
+    
+    /**
+     * @brief find a demon by his line collumn location in a list.
+     * @param demonsList list of demon pointer.
+     * @param l case tested line.
+     * @param c case tested collumn.
+    */
+    static Demon* findDemonByLineCollumn(std::vector<Demon*> demonsList, int line, int collumn);
 };
 
 #endif /* StaticTest_hpp */

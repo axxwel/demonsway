@@ -28,7 +28,7 @@ public:
     bool addDemonGrid(int l, int c);
     
 private:
-    const float MOVE_TIME = 0.3;
+    const float MOVE_TIME = 0.5; //CREATE LINK TO Demon::Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
     const float JUMP_SCALE = 1.5;
     const float DEMON_IN_GRID_SCALE = 0.8;
     
@@ -41,6 +41,8 @@ private:
     std::vector<Demon*> _demonsActionList;
     
     std::vector<Demon*> _demonsToMoveList;
+    
+    std::vector<Demon*> _demonsToRemoveList;
     
     // pointer to demon ready to jump in grid
     Demon* _demonDiver = nullptr;
@@ -58,10 +60,23 @@ private:
     void startActionGrid(int turn = 0);
     
     /**
-     * @brief move demon in  grid.
+     * @brief remove demon into the  grid.
+     * @return a demon removed (true or false).
+    */
+    bool removeDemonsGrid();
+    
+    /**
+     * @brief move demon into the  grid.
      * @return a demon moved (true or false).
     */
     bool moveDemonsGrid();
+    
+    /**
+     * @brief remove demon in  grid.
+     * @param demon  removing demon.
+     * @return action type OK.
+    */
+    bool removeDemon(Demon* demon);
     
     /**
      * @brief move demon in  grid.
@@ -77,7 +92,7 @@ private:
      * @param c grid collumn
      * @return action type OK.
     */
-    void setInGrid(Demon* demon, int l, int c);
+    void addToGrid(Demon* demon, int l, int c);
     
     bool areDemonsAnimationsEnds();
 };

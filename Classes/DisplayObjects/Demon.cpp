@@ -123,22 +123,19 @@ bool Demon::setAnimation(cocos2d::Vector<cocos2d::SpriteFrame*> animFrames, Demo
     // set animation FPS
     auto animation = Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
     
-    // create action pointer
+    // init action pointer
     _demonAction = nullptr;
     
     // merge animation and function to ation pointer
     switch (animFunc) {
         case repeatAninForever:
+            // repeat animation forever
             _demonAction = RepeatForever::create(Animate::create(animation));
             break;
         case removeDemon:
-            
-            //
+            // send remove remove event when animation finished
             _demonAction = Sequence::create(Animate::create(animation), CallFunc::create([=](){
-                printf("%s",_name.c_str());
                 _eventDispatcher->dispatchCustomEvent(_name + "_REMOVE_END");
-                //this->removeFromParent();
-                //demonRemoveCallback();
             }), NULL);
         break;
             
