@@ -28,7 +28,7 @@ public:
     bool addDemonGrid(int l, int c);
     
 private:
-    const float MOVE_TIME = 0.5; //CREATE LINK TO Demon::Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
+    const float MOVE_TIME = 0.5; //issue->CREATE LINK TO Demon::Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
     const float JUMP_SCALE = 1.5;
     const float DEMON_IN_GRID_SCALE = 0.8;
     

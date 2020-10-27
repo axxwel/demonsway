@@ -49,7 +49,7 @@ public:
      * @param l case tested line.
      * @param c case tested collumn.
      * @param demonsList list of demon pointer.
-     * @return true if case free false else.
+     * @return free grid case boolean.
     */
     static bool getCaseFree(int l, int c, std::vector<Demon*> demonsList);
     
@@ -69,15 +69,15 @@ private:
      * @param demon_1 demon 1 to test.
      * @param demon_2 demon 2 to test.
     */
-    static void testDemonMatch(DemonMatch* demonMtch, Demon* demon_1, Demon* demon_2);
+    static void testDemonMatch(DemonMatch* demonMatch, Demon* demon_1, Demon* demon_2);
     
     /**
      * @brief find a demon by his line collumn location in a list.
-     * @param demonsList list of demon pointer.
      * @param l case tested line.
      * @param c case tested collumn.
+     * @param demonsList list of demon pointer.
     */
-    static Demon* findDemonByLineCollumn(std::vector<Demon*> demonsList, int line, int collumn);
+    static Demon* findDemonByLineCollumn(int l, int c, std::vector<Demon*> demonsList);
 };
 
 #endif /* StaticTest_hpp */

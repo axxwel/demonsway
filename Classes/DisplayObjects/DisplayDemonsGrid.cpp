@@ -116,38 +116,37 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     // first action turn init action list.
     if(_actionTurn <= 0)
     {
-        printf("START_ACTION===========================\n");
+        printf("---------START_ACTION----------\n");
         _demonsActionList.clear();
         
         _demonsActionList.insert(_demonsActionList.begin(), _demonsInGridList.begin(), _demonsInGridList.end());
     }
-    printf("turn(start) = %i\n", _actionTurn);
     
     // remove demon into the grid
     bool demonRemoved = removeDemonsGrid();
     
     // move demons into the grid
-    //bool demonMoved = moveDemonsGrid();
+    bool demonMoved = true;
+    if(!demonRemoved)
+    {
+        demonMoved = moveDemonsGrid();
+    }
     
-    //if(_demonsActionList.size() <= 0 || !demonMoved)
-    
-    if(_demonsActionList.size() <= 0 || !demonRemoved)
+    if(_demonsActionList.size() <= 0 || (!demonRemoved && !demonMoved))
     {
         // finish action and add new demon on diver board
-        printf("END_ACTION=================================\n");
+        printf("---------END_ACTION------------\n\n");
         _actionTurn = 0;
         addNewDemonDiver();
     }
     else
     {
         // start new turn after all animation ends
-        printf("LISTENER_END_TURN\n");
         _actionTurn ++;
         _eventDispatcher->addCustomEventListener("DEMONS_ANIMATIONS_ENDS",[this](EventCustom* event)
         {
-            printf("END_TURN\n");
+            printf("--NEW_TURN_N°%i--\n",_actionTurn);
             _eventDispatcher->removeCustomEventListeners("DEMONS_ANIMATIONS_ENDS");
-            printf("turn(end) = %i\n", _actionTurn);
             startActionGrid(_actionTurn);
         });
     }
@@ -155,23 +154,29 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
 
 bool DisplayDemonsGrid::removeDemonsGrid()
 {
-    // is a demon move boolean init
+    // is a demon remove boolean init
     bool demonRemoved = false;
     
-    // init demon can move list
+    // init demon can remove list
     _demonsToRemoveList.clear();
     std::vector<Demon*>::iterator removeIt;
     _demonsToRemoveList = StaticTest::getRemoveDemonList(_demonsInGridList);
-    
-    printf("_demonsToRemoveList = %lu\n", _demonsToRemoveList.size());
     
     for(removeIt = _demonsToRemoveList.begin(); removeIt != _demonsToRemoveList.end(); removeIt++)
     {
         demonRemoved = true;
         
+        // remove demon of the list
         Demon* removingDemon = *removeIt;
-        printf("REMOVE_%s\n", removingDemon->getName().c_str());
+        printf("REMOVE_%s\n",removingDemon->getName().c_str());
         removeDemon(removingDemon);
+        
+        // remove demon from action list
+        std::vector<Demon*>::iterator findIt = std::find(_demonsActionList.begin(), _demonsActionList.end(), removingDemon);
+        if(findIt != _demonsActionList.end())
+        {
+            _demonsActionList.erase(findIt);
+        }
     }
     
     return demonRemoved;
@@ -193,10 +198,15 @@ bool DisplayDemonsGrid::moveDemonsGrid()
         
         // move demon of the list
         Demon* movingDemon = *moveIt;
+        printf("REMOVE_%s\n",movingDemon->getName().c_str());
         moveDemon(movingDemon);
         
         // remove demon from the action list
-         _demonsActionList.erase(std::find(_demonsActionList.begin(), _demonsActionList.end(), movingDemon));
+        std::vector<Demon*>::iterator findIt = std::find(_demonsActionList.begin(), _demonsActionList.end(), movingDemon);
+        if(findIt != _demonsActionList.end())
+        {
+            _demonsActionList.erase(findIt);
+        }
     }
     
     return demonMoved;
@@ -204,23 +214,26 @@ bool DisplayDemonsGrid::moveDemonsGrid()
 
 bool DisplayDemonsGrid::removeDemon(Demon* demon)
 {
+    // get demon name and start remove animation
     std::string demonName  = demon->getName();
     demon->action(removing);
     
-    // remove demon from action list
-    _demonsActionList.erase(std::find(_demonsActionList.begin(), _demonsActionList.end(), demon));
-    
+    // listen demon remove animation end
     _eventDispatcher->addCustomEventListener(demonName + "_REMOVE_END",[demon, demonName, this](EventCustom* event)
     {
-        // remove demon from remove list
+        // remove demon pointer from remove list
         _demonsToRemoveList.erase(std::find(_demonsToRemoveList.begin(), _demonsToRemoveList.end(), demon));
         
-        // remove demon from demon in grid list
+        // remove demon pointer from demon in grid list
         _demonsInGridList.erase(std::find(_demonsInGridList.begin(), _demonsInGridList.end(), demon));
         
-        // remove demon
+        // remove demon sprite
         demon->removeFromParent();
         
+        // test if is the last action
+        areDemonsAnimationsEnds();
+        
+        // remove listener
         _eventDispatcher->removeCustomEventListeners(demonName + "_REMOVE_END");
     });
     
@@ -275,7 +288,7 @@ void DisplayDemonsGrid::addToGrid(Demon* demon, int line, int collumn)
 
 bool DisplayDemonsGrid::areDemonsAnimationsEnds()
 {
-    if(_demonsToMoveList.size() > 0)
+    if(_demonsToMoveList.size() > 0 || _demonsToRemoveList.size() > 0)
     {
         return false;
     }

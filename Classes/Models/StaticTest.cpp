@@ -44,39 +44,59 @@ std::vector<Demon*> StaticTest::getRemoveDemonList(std::vector<Demon*> demonsLis
 {
     std::vector<Demon*> demonToRemoveList;
     
+    // check witch demon removing in the list and put into a return list.
     for(int d = 0; d < demonsList.size(); d++)
     {
+        // get demon tested grid position
         Demon* demon = demonsList[d];
         int l = demon->getDemonGridPosition().line;
         int c = demon->getDemonGridPosition().collumn;
         
-        
+        // init demon match structure
         DemonMatch* demonMatchPtr = new DemonMatch();
         for(int t = 0; t < demonsList.size(); t++)
         {
             testDemonMatch(demonMatchPtr, demonsList[d], demonsList[t]);
         }
         
+        // set a vector position that content case can be removed
         std::vector<std::vector<int>> positionsRemoveList;
         
+        // five demons beside remove all the grid
         if((demonMatchPtr->up && demonMatchPtr->upUp && demonMatchPtr->down && demonMatchPtr->downDown) ||
            (demonMatchPtr->left && demonMatchPtr->leftLeft && demonMatchPtr->right && demonMatchPtr->rightRight))
         {
             return demonsList;
         }
         
-        if(demonMatchPtr->up && demonMatchPtr->down &&
-           demonMatchPtr->left && demonMatchPtr->right)
+        // demon are place in cross or L, push all the cases line and collumn into the position list
+            //cross
+        if((demonMatchPtr->up && demonMatchPtr->down &&
+           demonMatchPtr->left && demonMatchPtr->right)||
+           // L, up-right
+           (demonMatchPtr->up && demonMatchPtr->upUp &&
+           demonMatchPtr->right && demonMatchPtr->rightRight)||
+           // L, down-right
+           (demonMatchPtr->down && demonMatchPtr->downDown &&
+           demonMatchPtr->right && demonMatchPtr->rightRight)||
+           // L, up-left
+           (demonMatchPtr->up && demonMatchPtr->upUp &&
+           demonMatchPtr->left && demonMatchPtr->leftLeft)||
+           // L, down-left
+           (demonMatchPtr->down && demonMatchPtr->downDown &&
+           demonMatchPtr->left && demonMatchPtr->leftLeft))
         {
             positionsRemoveList.insert(positionsRemoveList.end(), {{l,0}, {l,1}, {l,2}, {l,3}, {l,4}, {l,5},{0,c}, {1,c}, {2,c}, {3,c}, {4,c}, {5,c}});
         }
         
         if(demonMatchPtr->up && demonMatchPtr->down)
         {
+            // four demon beside in line, push all the cases line into the position list
             if(demonMatchPtr->upUp || demonMatchPtr->downDown)
             {
                 positionsRemoveList.insert(positionsRemoveList.end(), {{0,c}, {1,c}, {2,c}, {3,c}, {4,c}, {5,c}});
             }
+            // three demon beside in line, push the three cases into the the position list
             else
             {
                 positionsRemoveList.insert(positionsRemoveList.end(),{{l-1,c}, {l,c}, {l+1,c}});
@@ -85,29 +105,33 @@ std::vector<Demon*> StaticTest::getRemoveDemonList(std::vector<Demon*> demonsLis
         
         if(demonMatchPtr->left && demonMatchPtr->right)
         {
+            // four demon beside in collumn, push all the cases collumn into the position list
             if(demonMatchPtr->leftLeft || demonMatchPtr->rightRight)
             {
                 positionsRemoveList.insert(positionsRemoveList.end(), {{l,0}, {l,1}, {l,2}, {l,3}, {l,4}, {l,5}});
             }
+            // three demon beside in collumn, push the three cases into the the position list
             else
             {
                 positionsRemoveList.insert(positionsRemoveList.end(),{{l,c-1}, {l,c}, {l,c+1}});
             }
         }
         
+        // fill the remove demon list if cases content demon
         for(int p = 0; p < positionsRemoveList.size(); p++)
         {
             const int l = positionsRemoveList[p][0];
             const int c = positionsRemoveList[p][1];
             
-            Demon* removeDemon = findDemonByLineCollumn(demonsList, l, c);
+            Demon* removeDemon = findDemonByLineCollumn(l, c, demonsList);
             if(removeDemon)
             {
-                demonToRemoveList.push_back(findDemonByLineCollumn(demonsList, l, c));
+                demonToRemoveList.push_back(findDemonByLineCollumn(l, c, demonsList));
             }
         }
     }
     
+    // remove duplicate demon in remove demon list
     std::sort( demonToRemoveList.begin(), demonToRemoveList.end() );
     demonToRemoveList.erase( std::unique( demonToRemoveList.begin(), demonToRemoveList.end() ), demonToRemoveList.end() );
     
@@ -162,14 +186,18 @@ bool StaticTest::isConflictCaseWin(std::vector<Demon*> demonsList, Demon* demon)
 
 void StaticTest::testDemonMatch(DemonMatch* demonMatch, Demon* demon_1, Demon* demon_2)
 {
+    // get demon one position into the grid
     int demon_1Line = demon_1->getDemonGridPosition().line;
     int demon_1Collumn = demon_1->getDemonGridPosition().collumn;
     int demon_1NameIndex = demon_1->getNameIndex();
     
+    // get demon two position into the grid
     int demon_2Line = demon_2->getDemonGridPosition().line;
     int demon_2Collumn = demon_2->getDemonGridPosition().collumn;
     int demon_2NameIndex = demon_2->getNameIndex();
     
+    // set the demon match structure pointer position to true
+    // if content same demon name index
     if(demon_1NameIndex == demon_2NameIndex)
     {
         if(demon_1Line - 1== demon_2Line && demon_1Collumn == demon_2Collumn)
@@ -198,20 +226,23 @@ void StaticTest::testDemonMatch(DemonMatch* demonMatch, Demon* demon_1, Demon* d
     }
 }
 
-Demon* StaticTest::findDemonByLineCollumn(std::vector<Demon*> demonsList, int line, int collumn)
+Demon* StaticTest::findDemonByLineCollumn(int l, int c, std::vector<Demon*> demonsList)
 {
     Demon* demon = nullptr;
     
+    // check all demon in the list.
     std::vector<Demon*>::iterator dIt;
     for(dIt = demonsList.begin(); dIt != demonsList.end(); dIt++)
     {
+        // get demon position
         Demon* demonTested = *dIt;
         DemonPosition demonTestedPosition;
         demonTestedPosition = demonTested->getDemonGridPosition();
           
+        // test what demon position match with line and collumn
         int lineTested = demonTestedPosition.line;
         int collumnTested = demonTestedPosition.collumn;
-        if(lineTested == line && collumnTested == collumn)
+        if(lineTested == l && collumnTested == c)
         {
             demon = demonTested;
         }
