@@ -68,10 +68,6 @@ void AppDelegate::initGLContextAttrs()
     GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8, 0};
 
     GLView::setGLContextAttrs(glContextAttrs);
-    
-    auto filesPath = FileUtils::getInstance();
-    filesPath->addSearchPath("../Resources/res/");
-    filesPath->addSearchPath("../proj.ios_mac/ios/Images.xcassets/");
 }
 
 // if you want to use the package manager to install more packages,

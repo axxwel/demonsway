@@ -28,9 +28,6 @@ DisplayBackground* DisplayBackground::create()
 
 bool DisplayBackground::init()
 {
-    //get sprite sheet image list
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
-    
     //get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
     int screenWidth = visibleSize.width;

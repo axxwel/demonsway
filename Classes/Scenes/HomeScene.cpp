@@ -27,10 +27,17 @@ bool HomeScene::init()
         return false;
     }
 
+    
+    FileUtils *fileUtils = FileUtils::getInstance();
+    std::vector<std::string> searchPaths = fileUtils->getSearchPaths();
+    std::string path = fileUtils->getWritablePath() + "stage";
+    searchPaths.insert(searchPaths.begin(), path);
+    fileUtils->setSearchPaths(searchPaths);
+    
     // get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-     
+    
     // create and add displayBackground
     auto background = DisplayBackground::create();
     background->setPosition(Vec2(visibleSize.width/2 + origin.x,

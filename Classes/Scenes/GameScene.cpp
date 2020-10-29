@@ -11,6 +11,7 @@
 #include "../Models/StaticGrid.hpp"
 
 #include "../DisplayObjects/DisplayBackground.hpp"
+#include "../DisplayObjects/DisplayScores.hpp"
 #include "../DisplayObjects/DisplayGrid.hpp"
 #include "../DisplayObjects/DisplayDemonsGrid.hpp"
 
@@ -57,6 +58,11 @@ bool GameScene::init()
     auto menu = Menu::create(exitBtn, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+    
+    // create, place and add menu
+    auto scores = DisplayScores::create();
+    scores->setPosition(Vec2::ZERO);
+    this->addChild(scores, 1);
     
     // create and add display grid (display grid use static grid to set position)
     auto gridDisplay = DisplayGrid::create();
