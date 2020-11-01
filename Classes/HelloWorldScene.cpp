@@ -84,8 +84,9 @@ bool HelloWorld::init()
 
     // add a label shows "Hello World"
     // create and initialize a label
-
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    
+    auto label = Label::createWithBMFont("fonts/font_combo.fnt", "0123");
+    //auto label = Label::createWithTTF("Hello World", "fonts/RifficFree-Bold.ttf", 24);
     if (label == nullptr)
     {
         problemLoading("'fonts/Marker Felt.ttf'");
