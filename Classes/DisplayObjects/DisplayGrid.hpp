@@ -21,7 +21,7 @@ public:
 private:
     
     const int BTN_SHIFT_HEIGHT = 24;
-    const int gridArray [GRID_SIZE][GRID_SIZE] = {{1,1,1,1,1,1},
+    const int gridArray [GRID_NBR_CASE][GRID_NBR_CASE] = {{1,1,1,1,1,1},
                                                   {1,1,1,1,1,1},
                                                   {1,1,1,1,1,1},
                                                   {1,1,1,1,1,1},

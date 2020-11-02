@@ -28,8 +28,8 @@ std::vector<Demon*> StaticTest::getMoveDemonList(std::vector<Demon*> demonsActio
         // check if new case is in grid and
         // if new case is free and
         // if new case is not occuped by an other demon deplacement
-        if(newL >= 0 && newL < GRID_SIZE &&
-           newC >= 0 && newC < GRID_SIZE &&
+        if(newL >= 0 && newL < GRID_NBR_CASE &&
+           newC >= 0 && newC < GRID_NBR_CASE &&
            StaticTest::getCaseFree(newL, newC, demonsInGridList) &&
            StaticTest::isConflictCaseWin(demonsActionList, demon))
         {

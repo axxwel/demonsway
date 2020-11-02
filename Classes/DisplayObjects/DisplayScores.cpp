@@ -28,22 +28,18 @@ DisplayScores* DisplayScores::create()
 
 bool DisplayScores::init()
 {
-    //get screen size
+    // get screen size
     auto visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     scores = Node::create();
-    /*
-    cocos2d::Label* label = cocos2d::Label::createWithTTF("Hello World!","Resources/fonts/Marker Felt.ttf",45);
-    label->setPosition(0,0);
-    this->addChild(label, 1);
-   
-    auto labelScore = Label::createWithBMFont("font_score.fnt", "000");
-    labelScore->setAnchorPoint(cocos2d::Vec2(0.0, 0.0));
-    scores->addChild(labelScore, 1);
-    scores->addChild(labelScore);
-    */
-    this->addChild(scores, 0);
     
+    auto labelScore = Label::createWithBMFont("fonts/font_score.fnt", "0123");
+    labelScore->setBMFontSize(60.0f);
+    labelScore->setAlignment(TextHAlignment::CENTER);
+    scores->addChild(labelScore, 1);
+    
+    this->addChild(scores, 0);
     
     return true;
 }

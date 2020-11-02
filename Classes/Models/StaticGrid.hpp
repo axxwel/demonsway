@@ -27,7 +27,7 @@ private:
 };
 
 //Global grid size variables
-static const int GRID_SIZE = 6;
+static const int GRID_NBR_CASE = 6;
 static const int GRID_SHIFT = 260;
 static const int CASE_SIZE = 104;
 

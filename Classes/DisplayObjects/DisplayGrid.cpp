@@ -39,9 +39,9 @@ bool DisplayGrid::init()
     srand((unsigned)time(NULL));
     
     //init gird display
-    for(int l = 0; l < GRID_SIZE + 1; l++)
+    for(int l = 0; l < GRID_NBR_CASE + 1; l++)
     {
-        for(int c = 0; c < GRID_SIZE + 1; c++)
+        for(int c = 0; c < GRID_NBR_CASE + 1; c++)
         {
             std::string gridCornerCaseName = cornerName(l, c);
             
@@ -49,7 +49,7 @@ bool DisplayGrid::init()
             cocos2d::Vec2 positionXY  = StaticGrid::getPositionXY(positionLC);
             
             //add grid button
-            if(gridArray[l][c] != 0 && l < GRID_SIZE && c < GRID_SIZE)
+            if(gridArray[l][c] != 0 && l < GRID_NBR_CASE && c < GRID_NBR_CASE)
             {
                 int buttonColor = rand() % 6;
                 
@@ -116,7 +116,7 @@ std::string DisplayGrid::cornerName(int line, int collumn)
         cornerLeftUp = 0;
         cornerRigthUp = 0;
     }
-    if(line >= GRID_SIZE)
+    if(line >= GRID_NBR_CASE)
     {
         cornerRigthDown = 0;
         cornerLeftDown = 0;
@@ -126,7 +126,7 @@ std::string DisplayGrid::cornerName(int line, int collumn)
         cornerLeftUp = 0;
         cornerLeftDown = 0;
     }
-    if(collumn >= GRID_SIZE)
+    if(collumn >= GRID_NBR_CASE)
     {
         cornerRigthUp = 0;
         cornerRigthDown = 0;
