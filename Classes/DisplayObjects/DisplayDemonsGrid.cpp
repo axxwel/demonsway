@@ -136,6 +136,9 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     {
         // finish action and add new demon on diver board
         printf("---------END_ACTION------------\n\n");
+        
+        //event demon removed (score)
+        _eventDispatcher->dispatchCustomEvent("END_ACTION_GRID");
         _actionTurn = 0;
         addNewDemonDiver();
     }
@@ -214,6 +217,10 @@ bool DisplayDemonsGrid::moveDemonsGrid()
 
 bool DisplayDemonsGrid::removeDemon(Demon* demon)
 {
+    //event demon removed (score)
+    demon->displayScore(3);
+    _eventDispatcher->dispatchCustomEvent("DEMON_REMOVED");
+        
     // get demon name and start remove animation
     std::string demonName  = demon->getName();
     demon->action(removing);
@@ -242,6 +249,10 @@ bool DisplayDemonsGrid::removeDemon(Demon* demon)
 
 bool DisplayDemonsGrid::moveDemon(Demon* demon)
 {
+    //event demon moved (score)
+    demon->displayScore(1);
+    _eventDispatcher->dispatchCustomEvent("DEMON_MOVED");
+    
     //get demon grid pixel position
     DemonPosition demonWayPos = demon->getDemonGridWayPosition();
     const int newL = demonWayPos.line;

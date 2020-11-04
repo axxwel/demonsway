@@ -16,11 +16,20 @@ cocos2d::Vec2 StaticGrid::getPositionXY(const cocos2d::Vec2 LC)
     int gridPosX = visibleSize.width/2 + origin.x;
     int gridPosY = visibleSize.height/2 + origin.y;
     
-    float y = LC.x * -CASE_SIZE + gridPosY + GRID_SHIFT;// + gridPosX - GRID_SHIFT;
+    float y = LC.x * -CASE_SIZE + gridPosY + GRID_SHIFT;
     
-    float x = LC.y * CASE_SIZE + gridPosX - GRID_SHIFT;// + gridPosY + GRID_SHIFT;
+    float x = LC.y * CASE_SIZE + gridPosX - GRID_SHIFT;
     
-   
-    // return position X and Y vector
+    // return pixel position X and Y vector
     return cocos2d::Vec2(x, y);
+}
+
+GridSize StaticGrid::getGridSize()
+{
+    GridSize gridSize;
+    
+    gridSize.width = CASE_SIZE * GRID_NBR_CASE + GRID_BORDER_SIZE * 2;
+    gridSize.height = CASE_SIZE * GRID_NBR_CASE + GRID_BORDER_SIZE * 2;
+    
+    return gridSize;
 }

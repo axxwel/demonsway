@@ -21,7 +21,6 @@ public:
     
 private:
     
-    
     // return home callback
     void menuHomeCallback(cocos2d::Ref* pSender);
 };

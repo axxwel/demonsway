@@ -57,10 +57,10 @@ bool GameScene::init()
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
     
-    // create, place and add menu
-    auto scores = DisplayScores::create();
-    scores->setPosition(Vec2::ZERO);
-    this->addChild(scores, 1);
+    // create, place and add sccore
+    auto scoresDisplay = DisplayScores::create();
+    scoresDisplay->setPosition(Vec2(visibleSize.width/2 + origin.x, (visibleSize.height * 3 + StaticGrid::getGridSize().height)/4));
+    this->addChild(scoresDisplay, 3);
     
     // create and add display grid (display grid use static grid to set position)
     auto gridDisplay = DisplayGrid::create();
@@ -75,8 +75,11 @@ bool GameScene::init()
     auto demonsGridDisplay = DisplayDemonsGrid::create(divingBoard);
     this->addChild(demonsGridDisplay, 3);
     
-    // remove event listener (create duplicate when restart a new GameScene)
+    // remove events listeners (create duplicate when restart a new GameScene)
     _eventDispatcher->removeCustomEventListeners("GRID_BTN_PUSH");
+    _eventDispatcher->removeCustomEventListeners("DEMON_MOVED");
+    _eventDispatcher->removeCustomEventListeners("DEMON_REMOVED");
+    _eventDispatcher->removeCustomEventListeners("END_ACTION_GRID");
     
     //add event listener to check whitch button is pushed in displayGrid
     _eventDispatcher->addCustomEventListener("GRID_BTN_PUSH",[=](EventCustom* event)
@@ -87,7 +90,22 @@ bool GameScene::init()
         int buttonCollumn = eventData[1];
         
         demonsGridDisplay->addDemonGrid(buttonLine, buttonCollumn);
-    });    
+    });
+    
+    _eventDispatcher->addCustomEventListener("DEMON_MOVED",[scoresDisplay](EventCustom* event)
+    {
+        scoresDisplay->addToCombo(1);
+    });
+    
+    _eventDispatcher->addCustomEventListener("DEMON_REMOVED",[scoresDisplay](EventCustom* event)
+    {
+        scoresDisplay->addToCombo(3);
+    });
+    
+    _eventDispatcher->addCustomEventListener("END_ACTION_GRID",[scoresDisplay](EventCustom* event)
+    {
+        scoresDisplay->setScore();
+    });
     
     return true;
 }

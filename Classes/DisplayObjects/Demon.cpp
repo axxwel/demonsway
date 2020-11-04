@@ -31,8 +31,8 @@ bool Demon::init()
 {
     // init demon random type and direction
     srand((unsigned)time(NULL));
-    _nameIndex = 1;//rand() % 9;
-    _wayIndex = rand() % 2 + 1;//rand() % 4;
+    _nameIndex = rand() % 9;
+    _wayIndex = rand() % 4;
     
     // init demon string
     const std::string nameStr = NAME_ARRAY[_nameIndex];
@@ -184,6 +184,33 @@ DemonPosition Demon::getDemonGridWayPosition()
     return demonPosition;
 }
 
+void Demon::displayScore(int score)
+{
+    auto labelScore = Label::createWithBMFont("fonts/font_combo.fnt", std::to_string(score));
+    float labelScoreSize = 36.0f;
+    labelScore->setBMFontSize(labelScoreSize);
+    labelScore->setAlignment(TextHAlignment::CENTER);
+    labelScore->setPosition(Vec2(0, labelScoreSize));
+    
+    this->addChild(labelScore,1);
+    
+    Vec2 scoreMovePos = Vec2(0, _demonSprite->getContentSize().height/2);
+    
+    
+    
+    auto move = MoveTo::create(SCORE_MOVE_TIME, scoreMovePos);
+    auto fade = FadeTo::create(SCORE_MOVE_TIME, 0);
+    auto callFunc = CallFunc::create([labelScore]()
+    {
+        labelScore->removeFromParent();
+    });
+    
+    // run action
+    auto seq = Sequence::create(Spawn::create(move, fade, NULL), callFunc, NULL);
+    labelScore->runAction(seq);
+    
+}
+
 int Demon::getNameIndex()
 {
     return _nameIndex;
@@ -195,10 +222,4 @@ int Demon::getWayIndex()
 int Demon::getPositionIndex()
 {
     return _line * 10 + _collumn;
-}
-
-void Demon::demonRemoveCallback()
-{
-    this->removeFromParent();
-    _eventDispatcher->dispatchCustomEvent(_name + "_REMOVE_END");
 }

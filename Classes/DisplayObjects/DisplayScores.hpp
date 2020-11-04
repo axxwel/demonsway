@@ -17,10 +17,20 @@ public:
 
     virtual bool init();
     
+    void addToCombo(int combo);
+    
+    void setScore();
+    
 private:
+    const float COMBO_MOVE_TIME = 0.5;
+    
     cocos2d::Node* scores = nullptr;
     
-        
+    cocos2d::Label* _labelScore;
+    cocos2d::Label* _labelCombo;
+    
+    int _score = 0;
+    int _combo = 0;
 };
 
 #endif /* DisplayScores_hpp */

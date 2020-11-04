@@ -9,16 +9,28 @@
 #define StaticGrid_hpp
 
 #include "cocos2d.h"
+
+struct GridSize
+{
+    int width;
+    int height;
+};
+
 class StaticGrid
 {
 public:
     /**
      * @brief Get the pixel position of grid case
      * @param LC line and collumn vector.
-     * @param gridXY grid position in screen.
      * @return pixel position of grid case.
     */
     static cocos2d::Vec2 getPositionXY(const cocos2d::Vec2 LC);
+    
+    /**
+     * @brief Get the grid size.
+     * @return size of grid case.
+    */
+    static GridSize getGridSize();
     
 private:
     
@@ -30,5 +42,6 @@ private:
 static const int GRID_NBR_CASE = 6;
 static const int GRID_SHIFT = 260;
 static const int CASE_SIZE = 104;
+static const int GRID_BORDER_SIZE = 12;
 
 #endif /* StaticGrid_hpp */

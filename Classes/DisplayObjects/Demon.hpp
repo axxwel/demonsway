@@ -65,11 +65,19 @@ public:
     */
     DemonPosition getDemonGridWayPosition();
     
+    /**
+     * @brief display the score over the demon.
+     * @param score value displayed.
+    */
+    void displayScore(int score);
+    
     int getNameIndex();
     int getWayIndex();
     int getPositionIndex();
     
 private:
+    
+    const float SCORE_MOVE_TIME = 0.5;
     
     // demon's type array
     const std::string NAME_ARRAY[9] = {"air","water","fire","forest","day","mecha","night","time","ground"};
@@ -105,9 +113,6 @@ private:
      * @return action OK.
     */
     bool setAnimation(cocos2d::Vector<cocos2d::SpriteFrame*> animFrames, DemonActionFunc animFunc = repeatAninForever);
-    
-    // demon remove callback
-    void demonRemoveCallback();
 };
 
 #endif /* Demon_hpp */
