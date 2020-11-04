@@ -83,6 +83,8 @@ private:
     const std::string NAME_ARRAY[9] = {"air","water","fire","forest","day","mecha","night","time","ground"};
     // demon's direction array
     const std::string WAY_ARRAY[4] = {"face","side","side","back"};
+    // demon's color array
+    const cocos2d::Color3B COLOR_ARRAY[9] = {cocos2d::Color3B::WHITE, cocos2d::Color3B::BLUE, cocos2d::Color3B::RED, cocos2d::Color3B::GREEN, cocos2d::Color3B(0,255,255), cocos2d::Color3B::GRAY, cocos2d::Color3B(127,71,221), cocos2d::Color3B::YELLOW, cocos2d::Color3B(166,124,82)};
     
     // demons init values
     int _nameIndex;

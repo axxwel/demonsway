@@ -186,11 +186,12 @@ DemonPosition Demon::getDemonGridWayPosition()
 
 void Demon::displayScore(int score)
 {
-    // create score label and place over demon
+    // create score label, color and place over demon
     auto labelScore = Label::createWithBMFont("fonts/font_combo.fnt", std::to_string(score));
     float labelScoreSize = 36.0f;
     labelScore->setBMFontSize(labelScoreSize);
     labelScore->setAlignment(TextHAlignment::CENTER);
+    labelScore->setColor(COLOR_ARRAY[_nameIndex]);
     labelScore->setPosition(Vec2(0, labelScoreSize));
     
     this->addChild(labelScore,1);
