@@ -37,8 +37,10 @@ bool DisplayScores::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    // init scores container node
     scores = Node::create();
     
+    // create and place score label
     _labelScore = Label::createWithBMFont("fonts/font_score.fnt", std::to_string(_score));
     float labelScoreSize = 60.0f;
     _labelScore->setBMFontSize(labelScoreSize);
@@ -47,6 +49,7 @@ bool DisplayScores::init()
     
     scores->addChild(_labelScore, 0);
     
+    // create and place combo label
     _labelCombo = Label::createWithBMFont("fonts/font_combo.fnt", std::to_string(_combo));
     float labelComboSize = 36.0f;
     _labelCombo->setBMFontSize(labelComboSize);
@@ -66,6 +69,7 @@ void DisplayScores::addToCombo(int combo)
 {
     _combo += combo;
     
+    // display combo label
     _labelCombo->setOpacity(255);
     _labelCombo->setString(std::to_string(_combo));
 }
@@ -75,8 +79,10 @@ void DisplayScores::setScore()
     _score += _combo;
     _combo = 0;
     
+    // keep combo label initial position
     Vec2 initComboPos = _labelCombo->getPosition();
     
+    // create animation to add combo label to score label
     auto move = MoveTo::create(COMBO_MOVE_TIME, _labelScore->getPosition());
     auto fade = FadeTo::create(COMBO_MOVE_TIME, 0);
     auto callFunc = CallFunc::create([this, initComboPos]()

@@ -28,7 +28,7 @@ public:
     
     /**
      * @brief Get the grid size.
-     * @return size of grid case.
+     * @return size of grid in pixel.
     */
     static GridSize getGridSize();
     

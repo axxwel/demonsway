@@ -63,7 +63,7 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
     // get grid pixel position
     Vec2 posDemon = StaticGrid::getPositionXY(Vec2(l, c));
     
-    // demon jump to grid position
+    // create animation demon jump to grid position
     auto move = MoveTo::create(MOVE_TIME, posDemon);
     auto scaleUp = ScaleTo::create(MOVE_TIME/2, JUMP_SCALE);
     auto scaleDown = ScaleTo::create(MOVE_TIME/2, DEMON_IN_GRID_SCALE);
@@ -75,6 +75,8 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
         startActionGrid();
     });
     auto seq = Sequence::create(Spawn::create(scaleSeq, move, NULL), callFunc, NULL);
+    
+    // run animation
     demon->runAction(seq);
     demon->action(dance);
     
@@ -95,7 +97,7 @@ bool DisplayDemonsGrid::addNewDemonDiver()
     newDemon->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y - newDemon->getContentSize().height));
     this->addChild(newDemon, 2);
     
-    // move demon to divin board edge an wait push grid button
+    // create animation move demon to divin board edge an wait push grid button
     auto move = MoveTo::create(MOVE_TIME, Vec2(_divingBoard->getPosition().x,_divingBoard->getContentSize().height*3/4));
     auto callFunc = CallFunc::create([=]()
     {
@@ -103,6 +105,8 @@ bool DisplayDemonsGrid::addNewDemonDiver()
         _demonDiver = newDemon;
     });
     auto seq = Sequence::create(move, callFunc, NULL);
+    
+    // run animation
     newDemon->runAction(seq);
     newDemon->action(enterDiving);
     
@@ -116,7 +120,6 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     // first action turn init action list.
     if(_actionTurn <= 0)
     {
-        printf("---------START_ACTION----------\n");
         _demonsActionList.clear();
         
         _demonsActionList.insert(_demonsActionList.begin(), _demonsInGridList.begin(), _demonsInGridList.end());
@@ -134,11 +137,10 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     
     if(_demonsActionList.size() <= 0 || (!demonRemoved && !demonMoved))
     {
-        // finish action and add new demon on diver board
-        printf("---------END_ACTION------------\n\n");
-        
-        //event demon removed (score)
+        // event action end (score)
         _eventDispatcher->dispatchCustomEvent("END_ACTION_GRID");
+        
+        // finish action and add new demon on diver board
         _actionTurn = 0;
         addNewDemonDiver();
     }
@@ -148,7 +150,6 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
         _actionTurn ++;
         _eventDispatcher->addCustomEventListener("DEMONS_ANIMATIONS_ENDS",[this](EventCustom* event)
         {
-            printf("--NEW_TURN_N°%i--\n",_actionTurn);
             _eventDispatcher->removeCustomEventListeners("DEMONS_ANIMATIONS_ENDS");
             startActionGrid(_actionTurn);
         });
@@ -169,9 +170,8 @@ bool DisplayDemonsGrid::removeDemonsGrid()
     {
         demonRemoved = true;
         
-        // remove demon of the list
+        // intit remove demon of the list
         Demon* removingDemon = *removeIt;
-        printf("REMOVE_%s\n",removingDemon->getName().c_str());
         removeDemon(removingDemon);
         
         // remove demon from action list
@@ -199,7 +199,7 @@ bool DisplayDemonsGrid::moveDemonsGrid()
     {
         demonMoved = true;
         
-        // move demon of the list
+        // init move demon of the list
         Demon* movingDemon = *moveIt;
         printf("REMOVE_%s\n",movingDemon->getName().c_str());
         moveDemon(movingDemon);
@@ -286,7 +286,7 @@ void DisplayDemonsGrid::addToGrid(Demon* demon, int line, int collumn)
 {
     // init demon : name and position
     demon->setName("DEMON_" + std::to_string(line) + "_" + std::to_string(collumn));
-    demon->setGridPosition(line, collumn);
+    demon->setDemonGridPosition(line, collumn);
     
     // push demon in demon grid list
     std::vector<Demon*>::iterator demonIt;
@@ -299,6 +299,7 @@ void DisplayDemonsGrid::addToGrid(Demon* demon, int line, int collumn)
 
 bool DisplayDemonsGrid::areDemonsAnimationsEnds()
 {
+    // test move and remove list
     if(_demonsToMoveList.size() > 0 || _demonsToRemoveList.size() > 0)
     {
         return false;
@@ -307,6 +308,3 @@ bool DisplayDemonsGrid::areDemonsAnimationsEnds()
     
     return true;
 }
-
-
-

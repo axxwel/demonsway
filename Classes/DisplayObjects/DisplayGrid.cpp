@@ -27,15 +27,16 @@ DisplayGrid* DisplayGrid::create()
 
 bool DisplayGrid::init()
 {
-    
+    // create grid container node
     auto gridContainer = Node::create();
     this->addChild(gridContainer, 1);
     
-    
+    // create grid buttons container
     auto gridButtonsMenu = Menu::create();
     gridButtonsMenu->setPosition(Vec2::ZERO);
     gridContainer->addChild(gridButtonsMenu, 2);
     
+    // init randomization
     srand((unsigned)time(NULL));
     
     //init gird display

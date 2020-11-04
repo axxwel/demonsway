@@ -17,8 +17,15 @@ public:
 
     virtual bool init();
     
+    /**
+     * @brief add score demon moved or removed to combo.
+     * @param combo  number added (1 move or 3 remove).
+    */
     void addToCombo(int combo);
     
+    /**
+     * @brief at turn end, add combo number to game score .
+    */
     void setScore();
     
 private:

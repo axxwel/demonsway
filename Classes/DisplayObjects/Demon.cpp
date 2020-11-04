@@ -96,7 +96,7 @@ cocos2d::Vector<cocos2d::SpriteFrame*> Demon::createAnimFrames(std::string animN
     
     // format frame name to char array, add frame number and image extention
     std::string s = animName + "%04d.png";
-    int n = s.length();
+    unsigned long n = s.length();
     char char_anim[n + 1];
     strcpy(char_anim, s.c_str());
     
@@ -149,7 +149,7 @@ bool Demon::setAnimation(cocos2d::Vector<cocos2d::SpriteFrame*> animFrames, Demo
     return true;
 }
 
-void Demon::setGridPosition(int line, int collumn)
+void Demon::setDemonGridPosition(int line, int collumn)
 {
     _line = line;
     _collumn = collumn;
@@ -186,6 +186,7 @@ DemonPosition Demon::getDemonGridWayPosition()
 
 void Demon::displayScore(int score)
 {
+    // create score label and place over demon
     auto labelScore = Label::createWithBMFont("fonts/font_combo.fnt", std::to_string(score));
     float labelScoreSize = 36.0f;
     labelScore->setBMFontSize(labelScoreSize);
@@ -194,10 +195,10 @@ void Demon::displayScore(int score)
     
     this->addChild(labelScore,1);
     
+    // init label score end position
     Vec2 scoreMovePos = Vec2(0, _demonSprite->getContentSize().height/2);
     
-    
-    
+    // create label score action
     auto move = MoveTo::create(SCORE_MOVE_TIME, scoreMovePos);
     auto fade = FadeTo::create(SCORE_MOVE_TIME, 0);
     auto callFunc = CallFunc::create([labelScore]()

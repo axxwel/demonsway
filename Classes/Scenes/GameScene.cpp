@@ -80,6 +80,7 @@ bool GameScene::init()
     _eventDispatcher->removeCustomEventListeners("DEMON_MOVED");
     _eventDispatcher->removeCustomEventListeners("DEMON_REMOVED");
     _eventDispatcher->removeCustomEventListeners("END_ACTION_GRID");
+    _eventDispatcher->removeCustomEventListeners("GAME_OVER");
     
     //add event listener to check whitch button is pushed in displayGrid
     _eventDispatcher->addCustomEventListener("GRID_BTN_PUSH",[=](EventCustom* event)
@@ -92,19 +93,28 @@ bool GameScene::init()
         demonsGridDisplay->addDemonGrid(buttonLine, buttonCollumn);
     });
     
+    //add event listener to check when demon was move in grid
     _eventDispatcher->addCustomEventListener("DEMON_MOVED",[scoresDisplay](EventCustom* event)
     {
         scoresDisplay->addToCombo(1);
     });
     
+    //add event listener to check when demon was remove in grid
     _eventDispatcher->addCustomEventListener("DEMON_REMOVED",[scoresDisplay](EventCustom* event)
     {
         scoresDisplay->addToCombo(3);
     });
     
+    //add event listener to check when all actions ended and new demon added in diving board
     _eventDispatcher->addCustomEventListener("END_ACTION_GRID",[scoresDisplay](EventCustom* event)
     {
         scoresDisplay->setScore();
+    });
+    
+    //add event listener to check when demon grid was full
+    _eventDispatcher->addCustomEventListener("GAME_OVER",[=](EventCustom* event)
+    {
+        
     });
     
     return true;

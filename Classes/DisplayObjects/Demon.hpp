@@ -51,7 +51,7 @@ public:
      * @param line grid position.
      * @param Collumn grid position.
     */
-    void setGridPosition(int line, int collumn);
+    void setDemonGridPosition(int line, int collumn);
     
     /**
      * @brief get demon position on grid.
