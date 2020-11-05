@@ -83,6 +83,11 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
     return true;
 }
 
+void DisplayDemonsGrid::removeAllDemons()
+{
+    
+}
+
 bool DisplayDemonsGrid::addNewDemonDiver()
 {
     // reset the demon diver pointer
@@ -123,6 +128,14 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
         _demonsActionList.clear();
         
         _demonsActionList.insert(_demonsActionList.begin(), _demonsInGridList.begin(), _demonsInGridList.end());
+    }
+    
+    // first action turn init action list.
+    if(_demonsActionList.size() >= 1)//GRID_NBR_CASE*GRID_NBR_CASE)
+    {
+        // event end game and out of function
+        _eventDispatcher->dispatchCustomEvent("GAME_OVER");
+        return;
     }
     
     // remove demon into the grid

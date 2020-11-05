@@ -10,6 +10,10 @@
 
 #include "cocos2d.h"
 
+#include "../DisplayObjects/DisplayScores.hpp"
+#include "../DisplayObjects/DisplayGrid.hpp"
+#include "../DisplayObjects/DisplayDemonsGrid.hpp"
+
 class GameScene : public cocos2d::Scene
 {
 public:
@@ -21,8 +25,19 @@ public:
     
 private:
     
+    DisplayScores* _scoresDisplay = nullptr;
+    
+    DisplayGrid* _gridDisplay = nullptr;
+    
+    cocos2d::Sprite* _divingBoard = nullptr;
+    
+    DisplayDemonsGrid* _demonGridDisplay = nullptr;
+    
     // return home callback
     void menuHomeCallback(cocos2d::Ref* pSender);
+    
+    // end game
+    void gameOverCallback();
 };
 
 #endif /* GameScene_hpp */

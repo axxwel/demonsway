@@ -9,10 +9,6 @@
 #include "GameScene.hpp"
 
 #include "../DisplayObjects/DisplayBackground.hpp"
-#include "../DisplayObjects/DisplayScores.hpp"
-#include "../DisplayObjects/DisplayGrid.hpp"
-#include "../DisplayObjects/DisplayDemonsGrid.hpp"
-
 
 USING_NS_CC;
 
@@ -58,21 +54,21 @@ bool GameScene::init()
     this->addChild(menu, 1);
     
     // create, place and add sccore
-    auto scoresDisplay = DisplayScores::create();
-    scoresDisplay->setPosition(Vec2(visibleSize.width/2 + origin.x, (visibleSize.height * 3 + StaticGrid::getGridSize().height)/4));
-    this->addChild(scoresDisplay, 3);
+    _scoresDisplay = DisplayScores::create();
+    _scoresDisplay->setPosition(Vec2(visibleSize.width/2 + origin.x, (visibleSize.height * 3 + StaticGrid::getGridSize().height)/4));
+    this->addChild(_scoresDisplay, 3);
     
     // create and add display grid (display grid use static grid to set position)
-    auto gridDisplay = DisplayGrid::create();
-    this->addChild(gridDisplay, 1);
+    _gridDisplay = DisplayGrid::create();
+    this->addChild(_gridDisplay, 1);
     
     // create and add divingBoard
-    auto divingBoard = Sprite::createWithSpriteFrameName("divingBoard@2x.png");
-    divingBoard->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y + divingBoard->getContentSize().height/2));
-    this->addChild(divingBoard,2);
+    _divingBoard = Sprite::createWithSpriteFrameName("divingBoard@2x.png");
+    _divingBoard->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y + _divingBoard->getContentSize().height/2));
+    this->addChild(_divingBoard,2);
     
     // create and add display grid (display grid use static grid to set position)
-    auto demonsGridDisplay = DisplayDemonsGrid::create(divingBoard);
+    auto demonsGridDisplay = DisplayDemonsGrid::create(_divingBoard);
     this->addChild(demonsGridDisplay, 3);
     
     // remove events listeners (create duplicate when restart a new GameScene)
@@ -94,27 +90,27 @@ bool GameScene::init()
     });
     
     //add event listener to check when demon was move in grid
-    _eventDispatcher->addCustomEventListener("DEMON_MOVED",[scoresDisplay](EventCustom* event)
+    _eventDispatcher->addCustomEventListener("DEMON_MOVED",[this](EventCustom* event)
     {
-        scoresDisplay->addToCombo(1);
+        _scoresDisplay->addToCombo(1);
     });
     
     //add event listener to check when demon was remove in grid
-    _eventDispatcher->addCustomEventListener("DEMON_REMOVED",[scoresDisplay](EventCustom* event)
+    _eventDispatcher->addCustomEventListener("DEMON_REMOVED",[this](EventCustom* event)
     {
-        scoresDisplay->addToCombo(3);
+        _scoresDisplay->addToCombo(3);
     });
     
     //add event listener to check when all actions ended and new demon added in diving board
-    _eventDispatcher->addCustomEventListener("END_ACTION_GRID",[scoresDisplay](EventCustom* event)
+    _eventDispatcher->addCustomEventListener("END_ACTION_GRID",[this](EventCustom* event)
     {
-        scoresDisplay->setScore();
+        _scoresDisplay->setScore();
     });
     
     //add event listener to check when demon grid was full
     _eventDispatcher->addCustomEventListener("GAME_OVER",[=](EventCustom* event)
     {
-        
+        gameOverCallback();
     });
     
     return true;
@@ -125,4 +121,13 @@ void GameScene::menuHomeCallback(Ref* pSender)
 {
     auto scene = HomeScene::createScene();
     Director::getInstance()->replaceScene(scene);
+}
+
+
+void GameScene::gameOverCallback()
+{
+    _divingBoard->removeFromParent();
+    _gridDisplay->removeFromParent();
+    
+    _demonGridDisplay->removeAllDemons();
 }
