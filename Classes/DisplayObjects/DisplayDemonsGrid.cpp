@@ -83,11 +83,6 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
     return true;
 }
 
-void DisplayDemonsGrid::removeAllDemons()
-{
-    
-}
-
 bool DisplayDemonsGrid::addNewDemonDiver()
 {
     // reset the demon diver pointer
@@ -100,7 +95,7 @@ bool DisplayDemonsGrid::addNewDemonDiver()
     // create new demon and add out of screen
     auto newDemon = Demon::create();
     newDemon->setPosition(Vec2(visibleSize.width/2 + origin.x, origin.y - newDemon->getContentSize().height));
-    this->addChild(newDemon, 2);
+    this->addChild(newDemon);
     
     // create animation move demon to divin board edge an wait push grid button
     auto move = MoveTo::create(MOVE_TIME, Vec2(_divingBoard->getPosition().x,_divingBoard->getContentSize().height*3/4));
@@ -134,6 +129,7 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     if(_demonsActionList.size() >= 1)//GRID_NBR_CASE*GRID_NBR_CASE)
     {
         // event end game and out of function
+        removeAllDemons();
         _eventDispatcher->dispatchCustomEvent("GAME_OVER");
         return;
     }
@@ -318,6 +314,44 @@ bool DisplayDemonsGrid::areDemonsAnimationsEnds()
         return false;
     }
     _eventDispatcher->dispatchCustomEvent("DEMONS_ANIMATIONS_ENDS");
+    
+    return true;
+}
+
+void DisplayDemonsGrid::removeAllDemons()
+{
+    // get screen size
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    
+    // push demon in demon grid list
+    std::vector<Demon*>::iterator demonIt;
+    for(demonIt = _demonsInGridList.begin(); demonIt != _demonsInGridList.end(); demonIt++)
+    {
+        // remove demon pointer
+        Demon* removeDemon = *demonIt;
+        
+        // create animation fall demon out screen and remove
+        // delay value betwen 0 and 0,3 second
+        float delayValue = (rand() % 10)/30;
+        auto delay = DelayTime::create(delayValue);
+        // animation time 1 second
+        auto move = MoveTo::create(MOVE_TIME * 2 - delayValue, Vec2(removeDemon->getPosition().x, removeDemon->getPosition().x + -visibleSize.height));
+        auto moveEaseInBack = EaseBackIn::create(move->clone());
+        auto callFunc = CallFunc::create([=]()
+        {
+            removeDemon->removeFromParent();
+            if(this->getChildrenCount() <= 0)
+            {
+                _eventDispatcher->dispatchCustomEvent("ALL_DEMONS_REMOVED");
+            }
+            
+        });
+        auto seq = Sequence::create(delay, moveEaseInBack, callFunc, NULL);
+        
+        // run animation
+        removeDemon->runAction(seq);
+        removeDemon->action(dance);
+    }
     
     return true;
 }

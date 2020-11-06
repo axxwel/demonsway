@@ -27,11 +27,6 @@ public:
     */
     bool addDemonGrid(int l, int c);
     
-    /**
-     * @brief remove all demon animation.
-    */
-    void removeAllDemons();
-    
 private:
     const float MOVE_TIME = 0.5; //issue->CREATE LINK TO Demon::Animation::createWithSpriteFrames(animFrames, 1.0f / 24);
     const float JUMP_SCALE = 1.5;
@@ -100,6 +95,11 @@ private:
     void addToGrid(Demon* demon, int l, int c);
     
     bool areDemonsAnimationsEnds();
+    
+    /**
+     * @brief remove all demon animation.
+    */
+    void removeAllDemons();
 };
 
 #endif /* DisplayDemonsGrid_hpp */

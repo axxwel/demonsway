@@ -77,6 +77,7 @@ bool GameScene::init()
     _eventDispatcher->removeCustomEventListeners("DEMON_REMOVED");
     _eventDispatcher->removeCustomEventListeners("END_ACTION_GRID");
     _eventDispatcher->removeCustomEventListeners("GAME_OVER");
+    _eventDispatcher->removeCustomEventListeners("ALL_DEMONS_REMOVED");
     
     //add event listener to check whitch button is pushed in displayGrid
     _eventDispatcher->addCustomEventListener("GRID_BTN_PUSH",[=](EventCustom* event)
@@ -113,6 +114,20 @@ bool GameScene::init()
         gameOverCallback();
     });
     
+    //add event listener to check when all demons was removed after game over
+    _eventDispatcher->addCustomEventListener("ALL_DEMONS_REMOVED",[=](EventCustom* event)
+    {
+        // create start button images, add to menu and place
+        auto okBtnNormal = Sprite::createWithSpriteFrameName("button_start_normal@2x.png");
+        auto okBtnSelected = Sprite::createWithSpriteFrameName("button_start_selected@2x.png");
+        auto okBtn = MenuItemSprite::create(
+                                                   okBtnNormal,
+                                                   okBtnSelected,
+                                                   CC_CALLBACK_1(GameScene::menuHomeCallback, this));
+            
+        okBtn->setPosition(Vec2(0,0));
+    });
+    
     return true;
 }
 
@@ -128,6 +143,4 @@ void GameScene::gameOverCallback()
 {
     _divingBoard->removeFromParent();
     _gridDisplay->removeFromParent();
-    
-    _demonGridDisplay->removeAllDemons();
 }
