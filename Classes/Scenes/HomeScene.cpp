@@ -9,6 +9,9 @@
 #include "GameScene.hpp"
 
 #include "../DisplayObjects/DisplayBackground.hpp"
+#include "../DisplayObjects/DisplayDecor.cpp"
+
+#include "../Models/StaticSounds.hpp"
 
 USING_NS_CC;
 
@@ -33,15 +36,14 @@ bool HomeScene::init()
     
     // create and add displayBackground
     auto background = DisplayBackground::create();
-    background->setPosition(Vec2(visibleSize.width/2 + origin.x,
-                                     visibleSize.height/2 + origin.y));
+    background->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(background, 0);
-
-    // create and add title image
-    auto title = Sprite::createWithSpriteFrameName("title@2x.png");
-    title->setPosition(Vec2(visibleSize.width/2 + origin.x,
-                                visibleSize.height*2/3 + origin.y));
-    this->addChild(title, 1);
+    
+    // create and add displayDecor
+    auto decor = DisplayDecor::create();
+    decor->addTitle();
+    decor->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height * 2/3 + origin.y));
+    this->addChild(decor, 0);
         
     // create start button images, add to menu and place
     auto startBtnNormal = Sprite::createWithSpriteFrameName("button_start_normal@2x.png");
@@ -51,21 +53,7 @@ bool HomeScene::init()
                                                startBtnSelected,
                                                CC_CALLBACK_1(HomeScene::menuPlayCallback, this));
         
-    startBtn->setPosition(Vec2(
-                                origin.x + visibleSize.width*1/4,
-                                title->getPosition().y - title->getContentSize().height/2 - startBtn->getContentSize().height/2));
-        
-    // create score button images, add to menu and place
-    auto scoreBtnNormal = Sprite::createWithSpriteFrameName("button_score_normal@2x.png");
-    auto scoreBtnSelected = Sprite::createWithSpriteFrameName("button_score_selected@2x.png");
-    auto scoreBtn = MenuItemSprite::create(
-                                            scoreBtnNormal,
-                                            scoreBtnSelected,
-                                            CC_CALLBACK_1(HomeScene::menuScoresCallback, this));
-        
-    scoreBtn->setPosition(Vec2(
-                                origin.x + visibleSize.width*3/4,
-                                title->getPosition().y - title->getContentSize().height/2 - startBtn->getContentSize().height/2));
+    startBtn->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height * 1/4 + origin.y));
         
     // create sound button images, add to menu and place
     auto soundBtnNormal = Sprite::createWithSpriteFrameName("sound_on@2x.png");
@@ -81,16 +69,23 @@ bool HomeScene::init()
         
 
     // create, place and add menu
-    auto menu = Menu::create(startBtn, scoreBtn, soundBtn, NULL);
+    auto menu = Menu::create(startBtn, soundBtn, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
-        
+    
+    /*
+    // play home theme music;
+    StaticSounds::playMusic("home");
+     */
+    
     return true;
 }
 
 // replace current scene to game scene
 void HomeScene::menuPlayCallback(Ref* pSender)
 {
+    StaticSounds::playSound("window");
+    
     auto scene = GameScene::createScene();
     Director::getInstance()->replaceScene(scene);
 }

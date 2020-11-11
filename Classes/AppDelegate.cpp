@@ -24,6 +24,7 @@
 
 #include "AppDelegate.h"
 #include "Scenes/HomeScene.hpp"
+#include "Models/StaticSounds.hpp"
 
 // #define USE_AUDIO_ENGINE 1
 
@@ -105,7 +106,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setContentScaleFactor(2);
     
     // add sprite sheet image list
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameScreenAssets.plist");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gridAssets.plist");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("menuAssets.plist");
     
     // add animation demons sprite sheet
     const std::string DEMONS_NAMES_ARRAY[9] = {"Air","Water","Fire","Forest","Day","Mecha","Night","Time","Ground"};
@@ -115,6 +117,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     register_all_packages();
+    
+    // preload all game sound before start
+    StaticSounds::preLoad();
 
     // create a scene. it's an autorelease object
     auto scene = HomeScene::createScene();

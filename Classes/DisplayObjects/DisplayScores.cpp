@@ -77,6 +77,11 @@ void DisplayScores::addToCombo(int combo)
 void DisplayScores::setScore()
 {
     _score += _combo;
+    
+    if(_combo > _bestCombo)
+    {
+        _bestCombo = _combo;
+    }
     _combo = 0;
     
     // keep combo label initial position
@@ -94,4 +99,13 @@ void DisplayScores::setScore()
     // run action
     auto seq = Sequence::create(Spawn::create(move, fade, NULL), callFunc, NULL);
     _labelCombo->runAction(seq);
+}
+
+ScoresNumber DisplayScores::getScore()
+{
+    ScoresNumber scoresNumber;
+    scoresNumber.score = _score;
+    scoresNumber.combo = _bestCombo;
+    
+    return scoresNumber;
 }

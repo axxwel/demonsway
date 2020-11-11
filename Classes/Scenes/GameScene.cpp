@@ -9,6 +9,9 @@
 #include "GameScene.hpp"
 
 #include "../DisplayObjects/DisplayBackground.hpp"
+#include "../DisplayObjects/DisplayDecor.hpp"
+
+#include "../Models/StaticSounds.hpp"
 
 USING_NS_CC;
 
@@ -111,22 +114,30 @@ bool GameScene::init()
     //add event listener to check when demon grid was full
     _eventDispatcher->addCustomEventListener("GAME_OVER",[=](EventCustom* event)
     {
-        gameOverCallback();
+        gameOverStartCallback();
     });
     
     //add event listener to check when all demons was removed after game over
     _eventDispatcher->addCustomEventListener("ALL_DEMONS_REMOVED",[=](EventCustom* event)
     {
         // create start button images, add to menu and place
-        auto okBtnNormal = Sprite::createWithSpriteFrameName("button_start_normal@2x.png");
-        auto okBtnSelected = Sprite::createWithSpriteFrameName("button_start_selected@2x.png");
+        auto okBtnNormal = Sprite::createWithSpriteFrameName("button_ok_normal@2x.png");
+        auto okBtnSelected = Sprite::createWithSpriteFrameName("button_ok_selected@2x.png");
         auto okBtn = MenuItemSprite::create(
                                                    okBtnNormal,
                                                    okBtnSelected,
-                                                   CC_CALLBACK_1(GameScene::menuHomeCallback, this));
+                                                   CC_CALLBACK_1(GameScene::menuGameCallback, this));
             
-        okBtn->setPosition(Vec2(0,0));
+        okBtn->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height * 1/4 + origin.y));
+        menu->addChild(okBtn);
+        
+        gameOverEndCallback();
     });
+    
+    /*
+    // play home theme music;
+    StaticSounds::playMusic("game");
+    */
     
     return true;
 }
@@ -138,8 +149,31 @@ void GameScene::menuHomeCallback(Ref* pSender)
     Director::getInstance()->replaceScene(scene);
 }
 
+// replace current scene to home scene
+void GameScene::menuGameCallback(Ref* pSender)
+{
+    auto scene = GameScene::createScene();
+    Director::getInstance()->replaceScene(scene);
+}
 
-void GameScene::gameOverCallback()
+void GameScene::gameOverStartCallback()
+{
+    // get screen size
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    // create and add displayDecor
+    auto decor = DisplayDecor::create();
+    ScoresNumber scoresNumber = _scoresDisplay->getScore();
+    decor->addScores(scoresNumber.score, scoresNumber.combo);
+    decor->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height * 2/3 + origin.y));
+    this->addChild(decor, 4);
+    
+    
+    _scoresDisplay->removeFromParent();
+}
+
+void GameScene::gameOverEndCallback()
 {
     _divingBoard->removeFromParent();
     _gridDisplay->removeFromParent();

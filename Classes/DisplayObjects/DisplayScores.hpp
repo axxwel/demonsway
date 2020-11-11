@@ -10,6 +10,12 @@
 
 #include "cocos2d.h"
 
+struct ScoresNumber
+{
+    int score;
+    int combo;
+};
+
 class DisplayScores : public cocos2d::Node
 {
 public:
@@ -28,6 +34,12 @@ public:
     */
     void setScore();
     
+    /**
+     * @brief at turn end, add combo number to game score .
+     * @return scores
+    */
+    ScoresNumber getScore();
+    
 private:
     const float COMBO_MOVE_TIME = 0.5;
     
@@ -38,6 +50,7 @@ private:
     
     int _score = 0;
     int _combo = 0;
+    int _bestCombo = 0;
 };
 
 #endif /* DisplayScores_hpp */

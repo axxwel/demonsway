@@ -36,8 +36,12 @@ private:
     // return home callback
     void menuHomeCallback(cocos2d::Ref* pSender);
     
+    // return home callback
+    void menuGameCallback(cocos2d::Ref* pSender);
+    
     // end game
-    void gameOverCallback();
+    void gameOverStartCallback();
+    void gameOverEndCallback();
 };
 
 #endif /* GameScene_hpp */

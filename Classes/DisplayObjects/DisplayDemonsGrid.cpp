@@ -126,7 +126,7 @@ void DisplayDemonsGrid::startActionGrid(int actionTurn)
     }
     
     // first action turn init action list.
-    if(_demonsActionList.size() >= 1)//GRID_NBR_CASE*GRID_NBR_CASE)
+    if(_demonsActionList.size() >= GRID_NBR_CASE*GRID_NBR_CASE)
     {
         // event end game and out of function
         removeAllDemons();
@@ -210,7 +210,6 @@ bool DisplayDemonsGrid::moveDemonsGrid()
         
         // init move demon of the list
         Demon* movingDemon = *moveIt;
-        printf("REMOVE_%s\n",movingDemon->getName().c_str());
         moveDemon(movingDemon);
         
         // remove demon from the action list

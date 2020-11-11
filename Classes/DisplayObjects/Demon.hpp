@@ -10,8 +10,6 @@
 
 #include "cocos2d.h"
 
-
-
 enum DemonAction {
     enterDiving,
     waiting,
