@@ -7,6 +7,8 @@
 
 #include "Demon.hpp"
 
+#include "../Models/StaticSounds.hpp"
+
 USING_NS_CC;
 
 Demon* Demon::create()
@@ -67,18 +69,26 @@ void Demon::action(DemonAction demonAction)
     {
         case enterDiving:
             setAnimation(createAnimFrames(nameStr + "_back_walk", 6));
+            StaticSounds::playSound("demon_walk");
             break;
         case waiting:
             setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_stand", 74));
             break;
-        case dance:
+        case jump:
             setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_dance", 9));
+            StaticSounds::playSound("demon_jump");
             break;
         case walk:
             setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_walk", 6));
+            StaticSounds::playSound("demon_walk");
             break;
         case removing:
             setAnimation(createAnimFrames(nameStr + "_remove", 22), removeDemon);
+            StaticSounds::playSound("demon_explose");
+            StaticSounds::playSound(nameStr);
+            break;
+        case gameOver:
+            setAnimation(createAnimFrames(nameStr + "_" + wayStr + "_dance", 9));
             break;
             
         default:
@@ -186,6 +196,15 @@ DemonPosition Demon::getDemonGridWayPosition()
 
 void Demon::displayScore(int score)
 {
+    if(score == 3)
+    {
+        StaticSounds::playSound("coin_triple");
+    }
+    else if(score == 1)
+    {
+        StaticSounds::playSound("coin");
+    }
+    
     // create score label, color and place over demon
     auto labelScore = Label::createWithBMFont("fonts/font_combo.fnt", std::to_string(score));
     float labelScoreSize = 36.0f;

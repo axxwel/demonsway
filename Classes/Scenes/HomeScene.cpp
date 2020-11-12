@@ -66,12 +66,12 @@ bool HomeScene::init()
     soundBtn->setPosition(Vec2(
                                 origin.x + visibleSize.width - soundBtn->getContentSize().width/2,
                                 origin.y + visibleSize.height - soundBtn->getContentSize().height/2));
-        
-
+    
     // create, place and add menu
     auto menu = Menu::create(startBtn, soundBtn, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
+    
     
     /*
     // play home theme music;

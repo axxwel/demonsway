@@ -114,12 +114,15 @@ bool GameScene::init()
     //add event listener to check when demon grid was full
     _eventDispatcher->addCustomEventListener("GAME_OVER",[=](EventCustom* event)
     {
+        StaticSounds::playSound("game_over");
         gameOverStartCallback();
     });
     
     //add event listener to check when all demons was removed after game over
     _eventDispatcher->addCustomEventListener("ALL_DEMONS_REMOVED",[=](EventCustom* event)
     {
+        StaticSounds::playSound("aplause");
+        
         // create start button images, add to menu and place
         auto okBtnNormal = Sprite::createWithSpriteFrameName("button_ok_normal@2x.png");
         auto okBtnSelected = Sprite::createWithSpriteFrameName("button_ok_selected@2x.png");
@@ -145,6 +148,7 @@ bool GameScene::init()
 // replace current scene to home scene
 void GameScene::menuHomeCallback(Ref* pSender)
 {
+    StaticSounds::playSound("window");
     auto scene = HomeScene::createScene();
     Director::getInstance()->replaceScene(scene);
 }

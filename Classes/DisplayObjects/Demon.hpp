@@ -13,9 +13,10 @@
 enum DemonAction {
     enterDiving,
     waiting,
-    dance,
+    jump,
     walk,
-    removing
+    removing,
+    gameOver
 };
 
 enum DemonActionFunc {

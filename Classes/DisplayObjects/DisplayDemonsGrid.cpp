@@ -38,8 +38,17 @@ bool DisplayDemonsGrid::init(cocos2d::Sprite* divingBoard)
     _demonsActionList.clear();
     _demonsInGridList.clear();
     
-    // add new random demon on diving board
-    addNewDemonDiver();
+    // add new random demon on diving board with delay(cause opening windows sound)
+    auto delay = DelayTime::create(MOVE_TIME);
+    auto callFunc = CallFunc::create([this]()
+    {
+        printf("addNewDemonDiver()");
+        addNewDemonDiver();
+    });
+    
+    // run action
+    auto seq = Sequence::create(delay, callFunc, NULL);
+    this->runAction(seq);
     
     return true;
 }
@@ -78,7 +87,7 @@ bool DisplayDemonsGrid::addDemonGrid(int l, int c)
     
     // run animation
     demon->runAction(seq);
-    demon->action(dance);
+    demon->action(jump);
     
     return true;
 }
@@ -349,7 +358,7 @@ void DisplayDemonsGrid::removeAllDemons()
         
         // run animation
         removeDemon->runAction(seq);
-        removeDemon->action(dance);
+        removeDemon->action(gameOver);
     }
     
     return true;

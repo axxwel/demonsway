@@ -46,12 +46,19 @@ void StaticSounds::playSound(std::string sound)
 {
     std::string soundStr = sound + ".mp3";
     
-    printf("playSound %s\n", soundStr.c_str());
-    
     AudioEngine::play2d(soundStr, false, 1.0f);
 }
 
 void StaticSounds::preLoad()
 {
+    std::vector<std::string> soundsMap = {
+        "aplause", "button", "coin_triple", "coin", "demon_explose", "demon_jump", "demon_walk", "game_over", "window"
+    };
     
+    std::vector<std::string>::iterator soundIt;
+    for(soundIt = soundsMap.begin(); soundIt != soundsMap.end(); soundIt++)
+    {
+        std::string sound = *soundIt + ".mp3";
+        AudioEngine::preload(sound);
+    }
 }
