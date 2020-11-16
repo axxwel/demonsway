@@ -14,20 +14,27 @@ class StaticSounds
 {
 public:
     
+    /**
+     * @brief play game music
+     * @param theme music theme name.
+    */
     static void playMusic(std::string theme);
     
+    /**
+     * @brief play game soud effect.
+     * @param theme sound effect name.
+    */
     static void playSound(std::string sound);
     
+    /**
+     * @brief preload all game sound.
+    */
     static void preLoad();
     
 private:
     
-    static void backgroundMusicCallback(int audioID, std::string theme);
     
 };
-
-int _musicID = 0;
-std::string _musicThemeStr = "void";
 
 
 #endif /* StaticSounds_hpp */

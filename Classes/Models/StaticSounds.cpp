@@ -13,50 +13,28 @@ USING_NS_CC;
 
 void StaticSounds::playMusic(std::string theme)
 {
-    std::string themeStr = "demon_way_" + theme + "_theme.mp3";
-    
-    if(themeStr != _musicThemeStr)
-    {
-        _musicThemeStr = themeStr;
-        
-        if(_musicThemeStr == "demon_way_home_theme.mp3")
-        {
-            if(AudioEngine::getState(_musicID) == AudioEngine::AudioState::PLAYING)
-            {
-                AudioEngine::stop(_musicID);
-            }
-            
-            _musicID = AudioEngine::play2d(_musicThemeStr, true, 0.4f);
-        }
-        else
-        {
-            AudioEngine::setLoop(_musicID, false);
-            AudioEngine::setFinishCallback(_musicID, StaticSounds::backgroundMusicCallback);
-        }
-    }
-}
-
-void StaticSounds::backgroundMusicCallback(int audioID, std::string theme)
-{
-    AudioEngine::stop(_musicID);
-    _musicID = AudioEngine::play2d(_musicThemeStr, true, 0.4f);
+    //PLAY GAME MUSIC
 }
 
 void StaticSounds::playSound(std::string sound)
 {
+    // format sound file name
     std::string soundStr = sound + ".mp3";
     
+    // play sound (file name, repeat, volume)
     AudioEngine::play2d(soundStr, false, 1.0f);
 }
 
 void StaticSounds::preLoad()
 {
-    std::vector<std::string> soundsMap = {
+    // create sounds list name
+    std::vector<std::string> soundsList = {
         "aplause", "button", "coin_triple", "coin", "demon_explose", "demon_jump", "demon_walk", "game_over", "window"
     };
     
+    // load all game sounds
     std::vector<std::string>::iterator soundIt;
-    for(soundIt = soundsMap.begin(); soundIt != soundsMap.end(); soundIt++)
+    for(soundIt = soundsList.begin(); soundIt != soundsList.end(); soundIt++)
     {
         std::string sound = *soundIt + ".mp3";
         AudioEngine::preload(sound);
